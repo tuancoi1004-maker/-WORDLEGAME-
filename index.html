@@ -957,38 +957,476 @@ body {
 
 
 /* =========================================================
-   MOBILE
+   📱 MOBILE - TỐI ƯU CHO ĐIỆN THOẠI
    ========================================================= */
 
 @media (max-width: 520px) {
 
+    /* =========================
+       KHUNG CHÍNH
+       ========================= */
+
     body {
-        padding: 7px;
+        padding: 5px;
+
+        overflow-x: hidden;
+
+        align-items: flex-start;
     }
 
     .game {
-        padding: 14px;
+        width: 100%;
+        max-width: 100%;
 
-        border-radius: 24px;
+        padding: 10px;
+
+        border-radius: 20px;
+
+        margin: 0;
+
+        overflow: hidden;
     }
 
+
+    /* =========================
+       TITLE
+       ========================= */
+
     .title {
-        font-size: 27px;
+        font-size: 24px;
+
+        letter-spacing: 1px;
+
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 11px;
+
+        margin-bottom: 9px;
+    }
+
+
+    /* =========================
+       WELCOME
+       ========================= */
+
+    .welcome {
+        padding: 9px 8px;
+
+        margin-bottom: 9px;
+
+        border-radius: 14px;
+    }
+
+    .welcome-title {
+        font-size: 12px;
+
+        margin-bottom: 5px;
+    }
+
+    .welcome-text {
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+    .answer-note {
+        font-size: 10px;
+
+        padding: 3px 8px;
+    }
+
+
+    /* =========================
+       STATS
+       ========================= */
+
+    .stats {
+        gap: 5px;
+
+        margin-bottom: 7px;
+    }
+
+    .stat {
+        padding: 6px 2px;
+
+        border-radius: 11px;
+
+        min-width: 0;
+    }
+
+    .stat-title {
+        font-size: 8px;
+    }
+
+    .stat-value {
+        font-size: 15px;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* =========================
+       PROGRESS
+       ========================= */
+
+    .progress-box {
+        margin-bottom: 8px;
+    }
+
+    .progress-text {
+        font-size: 9px;
+
+        margin-bottom: 4px;
+    }
+
+    .progress {
+        height: 6px;
+    }
+
+
+    /* =========================
+       CHỦ ĐỀ
+       ========================= */
+
+    .topic-screen {
+        margin: 8px 0;
+    }
+
+    .topic-heading {
+        font-size: 13px;
+
+        margin: 6px 0;
+    }
+
+    .topic-description {
+        font-size: 10px;
+
+        line-height: 1.4;
+
+        margin: 5px 0;
     }
 
     .topic-grid {
         grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        margin-top: 8px;
     }
 
+    .topic-button {
+        padding: 10px 7px;
+
+        border-radius: 12px;
+    }
+
+    .topic-button-title {
+        font-size: 12px;
+
+        margin-bottom: 3px;
+    }
+
+    .topic-button-desc {
+        font-size: 9px;
+    }
+
+    .restart-topic-button {
+        padding: 9px;
+
+        margin-top: 8px;
+
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       QUESTION
+       ========================= */
+
     .question-box {
-        min-height: 110px;
+        width: 100%;
+
+        min-height: 100px;
+
+        padding: 10px 10px;
+
+        margin-bottom: 8px;
+
+        border-radius: 14px;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+    .question-text {
+        width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.4;
+
+        white-space: pre-line;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+    .question-message {
+        font-size: 10px;
+
+        line-height: 1.4;
+
+        overflow-wrap: anywhere;
+    }
+
+    .answer-length {
+        font-size: 10px;
+
+        margin-top: 4px;
+    }
+
+
+    /* =========================
+       GIẢI THÍCH
+       ========================= */
+
+    .explanation-box {
+        width: 100%;
+
+        padding: 8px 10px;
+
+        margin-top: 7px;
+
+        margin-bottom: 7px;
+
+        border-radius: 11px;
+    }
+
+    .explanation-title {
+        font-size: 11px;
+
+        margin-bottom: 4px;
+    }
+
+    .explanation-text {
+        font-size: 10px;
+
+        line-height: 1.45;
+
+        white-space: pre-line;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+
+    /* =========================
+       BOARD
+       ========================= */
+
+    #board {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 8px 0;
+
+        padding: 0;
+
+        gap: 4px;
+
+        overflow: hidden;
     }
 
     .row {
+        width: 100%;
+
+        max-width: 100%;
+
         gap: 3px;
+
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+    .cell {
+        /*
+           Không dùng width cố định.
+           JS createBoard() vẫn được phép
+           tính kích thước ô.
+        */
+
+        max-width: 44px;
+
+        max-height: 44px;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       INPUT + NÚT ĐOÁN
+       ========================= */
+
+    .input-area {
+        width: 100%;
+
+        gap: 5px;
+
+        margin-top: 6px;
+    }
+
+    #guessInput {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 9px 7px;
+
+        font-size: 16px;
+
+        border-radius: 9px;
+    }
+
+    #guessButton {
+        flex: 0 0 auto;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+
+        border-radius: 9px;
+    }
+
+
+    /* =========================
+       BUTTONS
+       ========================= */
+
+    .buttons {
+        width: 100%;
+
+        gap: 5px;
+
+        margin-top: 7px;
+    }
+
+    .continue,
+    .reset {
+        min-width: 0;
+
+        padding: 9px 4px;
+
+        font-size: 10px;
+
+        border-radius: 9px;
+
+        white-space: normal;
+
+        line-height: 1.2;
+    }
+
+
+    /* =========================
+       INFO
+       ========================= */
+
+    #info {
+        font-size: 9px;
+
+        line-height: 1.4;
+
+        margin-top: 7px;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =========================
+       LEVEL UP / QUÀ
+       ========================= */
+
+    .level-up {
+        padding: 7px;
+
+        margin-bottom: 7px;
+
+        font-size: 11px;
+    }
+
+    .gift-message {
+        padding: 9px;
+
+        margin: 7px 0;
+
+        font-size: 11px;
     }
 }
 
+
+/* =========================================================
+   📱 ĐIỆN THOẠI RẤT NHỎ
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    body {
+        padding: 3px;
+    }
+
+    .game {
+        padding: 8px;
+
+        border-radius: 17px;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        font-size: 10px;
+    }
+
+    .question-text {
+        font-size: 13px;
+    }
+
+    .question-box {
+        padding: 8px;
+    }
+
+    .cell {
+        max-width: 38px;
+
+        max-height: 38px;
+    }
+
+    #guessButton {
+        padding: 0 9px;
+
+        font-size: 11px;
+    }
+
+    .continue,
+    .reset {
+        font-size: 9px;
+
+        padding: 8px 3px;
+    }
+}
 
 .answer-length {
     width: 100%;
