@@ -100,7 +100,7 @@ const questions = [
 
 {level:1,question:"Thứ gì màu trắng, uống được, nhưng không phải nước và cũng không phải nước ngọt?",answer:"Sữa Bò",explanation:"Sữa bò là thức uống dinh dưỡng được lấy từ bò sữa, nổi tiếng với hàm lượng canxi cao."},
 
-{level:1,question:"Kẹo gì người bán vừa kéo vừa gõ nhạc?\"đố mẹo\"",answer:"Kẹo kéo",explanation:"Kẹo kéo được làm từ đường và mạch nha. Người bán thường vừa kéo kẹo thành những dải dài vừa gõ thanh kim loại tạo âm thanh vui tai để thu hút khách."}
+{level:1,question:"Kẹo gì người bán vừa kéo vừa gõ nhạc?\"đố mẹo\"",answer:"Kẹo kéo",explanation:"Kẹo kéo được làm từ đường và mạch nha. Người bán thường vừa kéo kẹo thành những dải dài vừa gõ thanh kim loại tạo âm thanh vui tai để thu hút khách."},
 
 
 /* =========================================================
@@ -177,7 +177,7 @@ const questions = [
 
 {level:2,question:"Ai chỉ huy chiến dịch Điện Biên Phủ?",answer:"Võ Nguyên Giáp",explanation:"Đại tướng Võ Nguyên Giáp là Tổng tư lệnh Quân đội Nhân dân Việt Nam và là người trực tiếp chỉ huy Chiến dịch Điện Biên Phủ năm 1954. Dưới sự lãnh đạo tài tình của ông, quân ta đã giành thắng lợi vang dội, góp phần kết thúc cuộc kháng chiến chống thực dân Pháp."},
 
-{level:2,question:"Mẹ của Chủ tịch Hồ Chí Minh tên là gì?",answer:"Hoàng Thị Loan",explanation:"Bà Hoàng Thị Loan (1868-1901) là thân mẫu của Chủ tịch Hồ Chí Minh, nổi tiếng với đức tính cần cù, chịu khó và có ảnh hưởng lớn đến quá trình hình thành nhân cách của Người.},
+{level:2,question:"Mẹ của Chủ tịch Hồ Chí Minh tên là gì?",answer:"Hoàng Thị Loan",explanation:"Bà Hoàng Thị Loan (1868-1901) là thân mẫu của Chủ tịch Hồ Chí Minh, nổi tiếng với đức tính cần cù, chịu khó và có ảnh hưởng lớn đến quá trình hình thành nhân cách của Người."},
 
 {level:2,question:"Tổng thống Nga nào giữ quyền lực trong thời gian rất dài?",answer:"Putin",explanation:"Vladimir Putin là Tổng thống Nga, lần đầu nhậm chức năm 2000. Ông đã trải qua nhiều nhiệm kỳ tổng thống và cũng từng giữ chức thủ tướng, trở thành một trong những nhà lãnh đạo có thời gian cầm quyền lâu nhất của Nga hiện đại"},
 
