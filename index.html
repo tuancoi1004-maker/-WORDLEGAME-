@@ -975,7 +975,7 @@ body {
 
     .title {
 
-        font-size: 30px;
+        font-size: 20px;
 
     }
 
@@ -1017,42 +1017,249 @@ body {
 
 }
 
+
 @media (max-width: 520px) {
 
+    /* Thu nhỏ khung game */
+    .game {
+        width: 98%;
+        margin: 5px auto;
+        padding: 8px;
+        border-width: 2px;
+        border-radius: 16px;
+    }
+
+    /* Tiêu đề */
+    .title {
+        font-size: 19px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        margin: 3px 0 10px;
+    }
+
+    /* Hướng dẫn */
+    .guide-button {
+        padding: 9px 6px;
+        font-size: 13px;
+    }
+
+    .guide-content {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .guide-gift {
+        padding: 8px;
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Thống kê */
+    .stats {
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .stat {
+        padding: 7px 4px;
+        border-radius: 10px;
+        min-width: 0;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .stat-value {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Thanh tiến độ */
+    .progress-area {
+        margin-bottom: 12px;
+    }
+
+    .progress-container {
+        height: 9px;
+    }
+
+    .progress-text {
+        font-size: 12px;
+    }
+
+    /* Chọn chủ đề */
     .topic-grid {
-
-        grid-template-columns: 1fr;
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
     }
 
-    .input-area {
-
-        flex-direction: column;
-
+    .topic-button {
+        min-width: 0;
+        min-height: 85px;
+        padding: 8px 4px;
+        border-radius: 12px;
     }
 
-    .guess-button {
-    width: 200px;
-    height: 48px;
-    min-height: 48px;
-    align-self: center;
-}
+    .topic-icon {
+        font-size: 24px;
+    }
 
-    .cell {
+    .topic-title {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
 
-        width: 37px;
+    .topic-desc {
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
 
-        height: 37px;
+    .topic-heading {
+        font-size: 20px;
+    }
 
-        font-size: 16px;
+    .topic-description {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
 
+    /* Câu hỏi */
+    .question-box {
+        padding: 10px;
+        margin-bottom: 8px;
+        border-radius: 12px;
+    }
+
+    .question-label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .question-text {
+        font-size: 14px;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .answer-length {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    /* Giải thích */
+    .explanation-box {
+        padding: 10px;
+        margin-bottom: 8px;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .explanation-text {
+        line-height: 1.5;
+    }
+
+    /* Gợi ý */
+    .hint-box {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .hint-text {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Bảng ô chữ: tự co theo độ dài đáp án */
+    .board {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+        gap: 4px;
+        overflow-x: auto;
+        align-items: center;
     }
 
     .board-row {
-
-        gap: 4px;
-
+        display: flex;
+        width: max-content;
+        max-width: 100%;
+        gap: 3px;
     }
+
+    .cell {
+        flex: 0 1 37px;
+        width: 37px;
+        min-width: 0;
+        height: 32px;
+        padding: 0;
+        border-width: 1px;
+        border-radius: 5px;
+        font-size: clamp(8px, 3.2vw, 14px);
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    /* Ô nhập đáp án */
+    .input-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .guess-input {
+        width: 100%;
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    /* Nút nhỏ gọn */
+    .guess-button,
+    .hint-button,
+    .continue-button,
+    .restart-topic-button,
+    .reset-button {
+        width: 155px;
+        min-width: 155px;
+        max-width: 155px;
+        height: 36px;
+        min-height: 36px;
+        padding: 4px 6px;
+        margin-top: 6px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+
+    .button-area {
+        gap: 5px;
+        margin-top: 8px;
+    }
+
+    .info {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .level-up {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .level-up-title {
+        font-size: 17px;
+    }
+
+    .gift-message {
+        padding: 12px;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+}
 
 }
 
