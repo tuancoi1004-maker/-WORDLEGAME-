@@ -1,22 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wordle Game</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Mini Game</title>
+
 
 <style>
 
+/* =========================================================
+   CÀI ĐẶT CHUNG
+   ========================================================= */
+
 :root {
+
     --pink: #f4a9c8;
     --pink-deep: #d96f9d;
     --pink-soft: #ffe5ef;
     --cream: #fffaf2;
-    --ink: #684b5b;
-    --muted: #a98798;
-    --line: #f1c6d8;
-    --white: #ffffff;
+
 }
 
 * {
@@ -24,105 +32,215 @@
 }
 
 body {
+
     margin: 0;
+
     min-height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
     background:
-        radial-gradient(
-            circle at 12% 12%,
-            rgba(255,255,255,.95) 0 5%,
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 88% 80%,
-            rgba(255,218,233,.9) 0 6%,
-            transparent 28%
-        ),
         linear-gradient(
             135deg,
-            #fff1f6 0%,
-            #ffe3ed 48%,
-            #fff8ed 100%
+            #fff0f6,
+            #fffaf2,
+            #fce8f1
         );
 
-    color: var(--ink);
-    padding: 15px;
-}
+    color: #594b52;
 
-.game {
-    width: 100%;
-    max-width: 1100px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #fffdfb 0%,
-            #fff7fa 100%
-        );
-
-    border: 2px solid #f3c8d9;
-    border-radius: 28px;
-
-    padding: 20px;
-
-    box-shadow:
-        0 18px 45px rgba(194,111,148,.18),
-        0 4px 12px rgba(194,111,148,.08);
-
-    position: relative;
-    overflow: hidden;
-}
-
-.game::before {
-    content: "✦  ♡  ✦";
-
-    position: absolute;
-
-    top: 8px;
-    right: 15px;
-
-    color: #efb4cc;
-
-    font-size: 13px;
-    letter-spacing: 4px;
-
-    pointer-events: none;
 }
 
 
 /* =========================================================
-   TITLE
+   KHUNG GAME
+   ========================================================= */
+
+.game {
+
+    width: 95%;
+
+    max-width: 1100px;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 3px solid var(--pink);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(180,100,140,0.15);
+
+}
+
+
+/* =========================================================
+   TIÊU ĐỀ
    ========================================================= */
 
 .title {
+
+    margin: 0;
+
     text-align: center;
 
-    font-size: 30px;
-    font-weight: 1000;
+    color: var(--pink-deep);
 
-    letter-spacing: 2px;
+    font-size: 38px;
 
-    color: #d96f9d;
+    font-weight: 900;
 
-    text-shadow:
-        0 3px 0 #ffe0eb;
 }
 
 .subtitle {
+
+    margin: 5px 0 20px;
+
     text-align: center;
 
-    font-size: 13px;
-    font-weight: 700;
+    color: #92717f;
 
-    color: #b58a9e;
+    font-size: 16px;
 
-    margin: 3px 0 13px;
+}
+
+
+/* =========================================================
+   HƯỚNG DẪN CHƠI
+   ========================================================= */
+
+.guide-box {
+    margin-bottom: 20px;
+    border: 2px solid #7c5cff;
+    border-radius: 18px;
+    background: #fff;
+    overflow: hidden;
+}
+.guide-button {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: none;
+
+    background: var(--pink-soft);
+
+    color: #8f3f66;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.guide-button:hover {
+
+    background: #ffd4e5;
+
+}
+
+.guide-content {
+
+    padding: 20px 24px;
+
+    color: #5f4b55;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+.guide-content h3 {
+
+    margin-top: 0;
+
+    color: var(--pink-deep);
+
+    text-align: center;
+
+}
+
+.guide-content h4 {
+
+    margin-top: 18px;
+
+    margin-bottom: 6px;
+
+    color: #c85f8e;
+
+}
+
+.guide-content p {
+
+    margin: 6px 0;
+
+}
+
+.guide-content ul {
+
+    margin-top: 5px;
+
+    margin-bottom: 10px;
+
+}
+
+.guide-content li {
+
+    margin: 3px 0;
+
+}
+
+.guide-gift {
+
+    margin: 15px 0;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #fff0f6;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #d45d91;
+
+}
+
+.guide-note {
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #fff8df;
+
+    border: 1px solid #f0d98a;
+
+    color: #795f20;
+
+}
+
+.hidden {
+
+    display: none !important;
+
 }
 
 
@@ -131,119 +249,73 @@ body {
    ========================================================= */
 
 .welcome {
-    background:
-        linear-gradient(
-            135deg,
-            #fff0f6,
-            #fff8ed
-        );
 
-    border: 1px solid #f2c4d7;
-    border-radius: 17px;
+    padding: 15px;
 
-    padding: 11px 13px;
-
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 
     text-align: center;
 
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.9);
-}
+    border-radius: 15px;
 
-.welcome-title {
-    font-size: 14px;
-    font-weight: 900;
+    background: var(--pink-soft);
 
-    color: #cb6793;
+    color: #8f3f66;
 
-    margin-bottom: 7px;
-}
-
-.welcome-text {
-    font-size: 11px;
     font-weight: 600;
 
-    line-height: 1.7;
-
-    color: #8e6c7d;
-}
-
-.welcome-fun {
-    margin-top: 5px;
-
-    color: #c86693;
-
-    font-weight: 800;
-}
-
-.answer-note {
-    display: inline-block;
-
-    margin-top: 7px;
-
-    padding: 4px 10px;
-
-    border-radius: 20px;
-
-    background: #fffdfd;
-
-    border: 1px solid #efc0d3;
-
-    color: #bd7090;
-
-    font-size: 11px;
-    font-weight: 900;
 }
 
 
 /* =========================================================
-   STATS
+   THỐNG KÊ
    ========================================================= */
 
 .stats {
+
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4, 1fr);
 
-    gap: 8px;
+    gap: 12px;
 
-    margin-bottom: 9px;
+    margin-bottom: 20px;
+
 }
 
 .stat {
-    background:
-        linear-gradient(
-            145deg,
-            #fff8fb,
-            #fff0f6
-        );
 
-    border: 1px solid #f0cada;
-
-    border-radius: 14px;
-
-    padding: 8px 4px;
+    padding: 12px;
 
     text-align: center;
 
-    box-shadow:
-        0 3px 8px rgba(200,117,153,.07);
+    background: #fff5f9;
+
+    border: 1px solid #f4c4d8;
+
+    border-radius: 15px;
+
 }
 
-.stat-title {
-    font-size: 10px;
-    font-weight: 800;
+.stat-label {
 
-    color: #b18a9d;
+    font-size: 12px;
+
+    color: #9c7887;
+
 }
 
 .stat-value {
-    font-size: 18px;
-    font-weight: 1000;
 
-    color: #d96f9d;
+    margin-top: 4px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: var(--pink-deep);
+
 }
 
 
@@ -251,48 +323,48 @@ body {
    PROGRESS
    ========================================================= */
 
-.progress-box {
-    margin-bottom: 12px;
+.progress-area {
+
+    margin-bottom: 20px;
+
 }
 
 .progress-text {
+
+    margin-bottom: 7px;
+
     text-align: center;
 
-    font-size: 11px;
-    font-weight: 700;
+    font-weight: bold;
 
-    color: #b18a9d;
+    color: #9c5675;
 
-    margin-bottom: 5px;
 }
 
-.progress {
-    height: 8px;
+.progress-container {
 
-    background: #f8e3eb;
+    width: 100%;
 
-    border: 1px solid #f2d0de;
+    height: 15px;
+
+    background: #f9dce8;
 
     border-radius: 20px;
 
     overflow: hidden;
+
 }
 
 .progress-bar {
+
     width: 0%;
+
     height: 100%;
 
-    background:
-        linear-gradient(
-            90deg,
-            #f5b4ce,
-            #d978a3
-        );
+    background: var(--pink-deep);
 
-    border-radius: 20px;
+    transition: width 0.3s;
 
-    transition:
-        width .35s ease;
 }
 
 
@@ -301,367 +373,371 @@ body {
    ========================================================= */
 
 .topic-screen {
-    margin: 12px 0;
+
+    text-align: center;
+
 }
 
 .topic-heading {
-    text-align: center;
 
-    font-size: 15px;
-    font-weight: 1000;
+    margin-bottom: 5px;
 
-    color: #c86693;
+    color: var(--pink-deep);
 
-    margin: 8px 0;
+    font-size: 28px;
+
 }
 
 .topic-description {
-    text-align: center;
 
-    color: #b18a9d;
+    margin-bottom: 20px;
 
-    font-size: 11px;
+    color: #92717f;
 
-    margin: 7px 0;
 }
 
 .topic-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(3, 1fr);
 
-    gap: 10px;
+    gap: 15px;
 
-    margin-top: 12px;
 }
 
 .topic-button {
-    border: 2px solid #f0cada;
 
-    border-radius: 15px;
+    min-height: 130px;
 
-    padding: 13px 8px;
+    padding: 20px;
+
+    border: 2px solid #f1bdd1;
+
+    border-radius: 20px;
 
     background:
         linear-gradient(
             145deg,
-            #fff9fc,
-            #fff0f6
+            #fff,
+            #fff1f6
         );
-
-    color: #8c6075;
-
-    font-weight: 1000;
 
     cursor: pointer;
 
     transition:
-        transform .15s,
-        border-color .15s,
-        background .15s,
-        box-shadow .15s;
+        transform 0.2s,
+        box-shadow 0.2s;
+
 }
 
 .topic-button:hover {
-    transform: translateY(-2px);
 
-    border-color: #df85ac;
-
-    background:
-        linear-gradient(
-            145deg,
-            #fff0f6,
-            #ffe5ef
-        );
+    transform: translateY(-4px);
 
     box-shadow:
-        0 5px 12px rgba(205,106,150,.12);
+        0 8px 20px rgba(210,110,150,0.18);
+
 }
 
-.topic-button.completed {
-    opacity: .45;
+.topic-button:disabled {
 
     cursor: not-allowed;
 
-    background: #f4eef1;
+    opacity: 0.5;
+
+    transform: none;
+
 }
 
-.topic-button-title {
-    font-size: 14px;
+.topic-icon {
 
-    margin-bottom: 5px;
+    font-size: 35px;
 
-    color: #c86693;
 }
 
-.topic-button-desc {
-    font-size: 10px;
+.topic-title {
 
-    font-weight: 700;
+    margin-top: 7px;
 
-    color: #a98798;
+    font-size: 19px;
+
+    font-weight: bold;
+
+    color: #a54e76;
+
 }
 
+.topic-desc {
 
-/* =========================================================
-   NÚT CHƠI LẠI Ở MÀN HÌNH CHỌN CHỦ ĐỀ
-   ========================================================= */
-
-.restart-topic-button {
-    width: 100%;
-
-    border: none;
-
-    border-radius: 12px;
-
-    padding: 11px;
-
-    margin-top: 12px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #e995b8,
-            #d8739f
-        );
-
-    color: white;
+    margin-top: 5px;
 
     font-size: 13px;
 
-    font-weight: 1000;
+    color: #92717f;
 
-    cursor: pointer;
-
-    box-shadow:
-        0 3px 7px rgba(205,106,150,.18);
-
-    transition:
-        transform .15s,
-        filter .15s;
-}
-
-.restart-topic-button:hover {
-    filter: brightness(1.05);
-
-    transform:
-        translateY(-1px);
 }
 
 
-/* =========================================================
-   QUÀ
-   ========================================================= */
+.restart-topic-button,
+.reset-button {
+    width: 200px;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
 
-.gift-message {
-    margin: 10px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
 
+    background: var(--pink-deep);
+    color: white;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
     text-align: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffe3ef,
-            #fff0c9
-        );
+    cursor: pointer;
+    transform: none;
+}
 
-    border: 2px solid #f1bfd3;
+.restart-topic-button:hover,
+.reset-button:hover {
+    transform: none;
+    filter: none;
+    opacity: 1;
+}
 
-    border-radius: 15px;
+.restart-topic-button:hover,
+.reset-button:hover {
 
-    color: #b05e83;
+    opacity: 0.85;
 
-    font-size: 14px;
+}
 
-    font-weight: 1000;
+.gift-message {
 
-    animation:
-        levelUpAnimation .7s ease;
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: #fff0b8;
+
+    color: #805d00;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
 }
 
 
 /* =========================================================
-   HIDDEN
-   ========================================================= */
-
-.hidden {
-    display: none !important;
-}
-
-
-/* =========================================================
-   LEVEL UP
+   LEVEL UP / THÔNG BÁO
    ========================================================= */
 
 .level-up {
-    display: none;
+
+    margin-bottom: 20px;
+
+    padding: 15px;
 
     text-align: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffe2ee,
-            #fff0c9
-        );
+    border-radius: 18px;
 
-    color: #a45b7b;
+    background: #fff3c7;
 
-    border: 2px solid #f2bad1;
+    color: #806000;
 
-    border-radius: 13px;
-
-    padding: 8px;
-
-    margin-bottom: 10px;
-
-    font-size: 14px;
-    font-weight: 1000;
-
-    animation:
-        levelUpAnimation .7s ease;
 }
 
-@keyframes levelUpAnimation {
+.level-up-title {
 
-    0% {
-        transform: scale(.7);
-        opacity: 0;
-    }
+    font-size: 22px;
 
-    70% {
-        transform: scale(1.08);
-        opacity: 1;
-    }
+    font-weight: 900;
 
-    100% {
-        transform: scale(1);
-    }
 }
 
 
 /* =========================================================
-   QUESTION
+   GAME AREA
    ========================================================= */
 
+.game-area {
+
+    display: none;
+
+}
+
 .question-box {
-    min-height: 120px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #fff5f9,
-            #fffaf2
-        );
+    margin-bottom: 15px;
 
-    border: 2px solid #efc4d6;
+    padding: 20px;
 
-    border-radius: 17px;
+    border-radius: 18px;
 
-    padding: 15px 25px;
+    background: #fff6fa;
 
-    display: flex;
+    border: 2px solid #f4c6d9;
 
-    flex-direction: column;
+}
 
-    justify-content: center;
+.question-label {
 
-    align-items: center;
+    margin-bottom: 8px;
 
-    text-align: center;
+    color: #c45c8b;
 
-    font-weight: 800;
+    font-weight: bold;
 
-    color: #765366;
-
-    margin-bottom: 13px;
-
-    box-shadow:
-        inset 0 1px 5px rgba(190,113,150,.06);
 }
 
 .question-text {
-    width: 100%;
-
-    font-size: 16px;
-
-    line-height: 1.35;
 
     white-space: pre-line;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+
+    color: #57434c;
+
 }
 
-.question-message {
-    width: 100%;
+.answer-length {
 
-    min-height: 17px;
+    margin-top: 10px;
 
-    margin-top: 6px;
+    color: #c35e8b;
 
-    font-size: 11px;
+    font-size: 18px;
 
-    line-height: 1.3;
+    font-weight: bold;
 
-    font-weight: 800;
-
-    color: #c86693;
-
-    text-align: center;
 }
 
 
 /* =========================================================
-   GIẢI THÍCH CÂU HỎI
+   GIẢI THÍCH
    ========================================================= */
 
 .explanation-box {
-    width: 100%;
 
-    margin-top: 10px;
+    display: none;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
-    padding: 10px 14px;
+    padding: 18px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #fff8fb,
-            #fff3f7
-        );
+    border-radius: 16px;
 
-    border: 1px solid #efc4d6;
+    background: #f3fff4;
 
-    border-radius: 13px;
+    border: 2px solid #b9dfbd;
 
-    text-align: left;
-
-    box-shadow:
-        inset 0 1px 4px rgba(190,113,150,.05);
 }
 
 .explanation-title {
-    color: #d96f9d;
 
-    font-size: 12px;
+    margin-bottom: 7px;
 
-    font-weight: 1000;
+    color: #4e9a57;
 
-    margin-bottom: 5px;
+    font-weight: bold;
+
 }
 
 .explanation-text {
-    color: #765366;
 
-    font-size: 12px;
+    white-space: pre-line;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
-    font-weight: 600;
-    
-   white-space: pre-line;
+}
+
+
+/* =========================================================
+   GỢI Ý
+   ========================================================= */
+
+.hint-box {
+
+    margin-bottom: 15px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background: #fff8df;
+
+    border: 2px solid #eed995;
+
+}
+
+.hint-text {
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #806a27;
+
+}
+
+
+.hint-button {
+    width: 200px;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #e7c75b;
+    color: #5d4b0c;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transform: none;
+}
+
+.hint-button:hover {
+    transform: none;
+    filter: none;
+}
+
+.hint-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 
@@ -669,7 +745,8 @@ body {
    BOARD
    ========================================================= */
 
-#board {
+.board {
+
     display: flex;
 
     flex-direction: column;
@@ -678,90 +755,70 @@ body {
 
     gap: 6px;
 
-    margin: 12px 0;
+    margin: 20px 0;
 
-    overflow-x: hidden;
-
-    padding: 2px 0 5px;
-
-    width: 100%;
 }
 
-.row {
+.board-row {
+
     display: flex;
 
-    justify-content: center;
+    gap: 6px;
 
-    gap: 4px;
-
-    width: 100%;
 }
 
 .cell {
-    width: 38px;
-    height: 38px;
 
-    flex: 0 0 38px;
+    width: 52px;
 
-    border: 2px solid #edc6d7;
-
-    border-radius: 10px;
+    height: 52px;
 
     display: flex;
 
-    justify-content: center;
     align-items: center;
 
-    font-size: 15px;
-    font-weight: 1000;
+    justify-content: center;
 
-    color: #79566a;
+    border: 2px solid #dfc2cf;
 
-    background: #fffafd;
+    border-radius: 8px;
 
-    box-shadow:
-        0 2px 5px rgba(190,113,150,.08);
+    background: white;
 
-    transition:
-        transform .15s,
-        background .2s,
-        border-color .2s;
+    font-size: 22px;
+
+    font-weight: 900;
+
 }
 
 .cell.correct {
-    background: #a8d8b5;
 
-    border-color: #8ac99d;
+    background: #8fd69a;
 
-    color: #fff;
+    border-color: #69b975;
+
+    color: white;
+
 }
 
 .cell.present {
-    background: #f4d78d;
 
-    border-color: #e8c56c;
+    background: #f1d26b;
 
-    color: #fff;
+    border-color: #d7b83e;
+
+    color: white;
+
 }
 
 .cell.absent {
-    background: #d9cfd5;
 
-    border-color: #cbbbc5;
+    background: #b8afb3;
 
-    color: #fff;
-}
+    border-color: #999094;
 
-.cell.pop {
-    animation:
-        popCell .15s ease;
-}
+    color: white;
 
-@keyframes popCell {
-
-    50% {
-        transform: scale(1.12);
-    }
 }
 
 
@@ -770,98 +827,71 @@ body {
    ========================================================= */
 
 .input-area {
+
     display: flex;
 
-    gap: 7px;
+    gap: 10px;
 
-    margin-top: 8px;
 }
 
-#guessInput {
+.guess-input {
+
     flex: 1;
 
     min-width: 0;
 
-    border: 2px solid #edc6d7;
+    padding: 13px;
 
-    border-radius: 11px;
+    border: 2px solid #e4bfd0;
 
-    padding: 10px;
+    border-radius: 12px;
 
     outline: none;
 
-    font-size: 15px;
+    font-size: 16px;
 
-    font-weight: 800;
-
-    text-align: center;
-
-    color: #79566a;
-
-    background: #fffdfd;
-
-    transition:
-        border-color .2s,
-        box-shadow .2s;
 }
 
-#guessInput::placeholder {
-    color: #c3a5b4;
+.guess-input:focus {
+
+    border-color: var(--pink-deep);
+
 }
 
-#guessInput:focus {
-    border-color: #df85ac;
+.guess-button {
+    width: 200px;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
 
-    box-shadow:
-        0 0 0 3px rgba(223,133,172,.15);
-}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-
-/* =========================================================
-   BUTTON ĐOÁN
-   ========================================================= */
-
-#guessButton {
     border: none;
-
-    border-radius: 11px;
-
-    padding: 0 16px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #e995b8,
-            #d8739f
-        );
-
+    border-radius: 12px;
+    background: var(--pink-deep);
     color: white;
 
-    font-weight: 1000;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
 
     cursor: pointer;
-
-    box-shadow:
-        0 3px 7px rgba(205,106,150,.18);
-
-    transition:
-        transform .15s,
-        filter .15s;
+    transform: none;
 }
 
-#guessButton:hover {
-    filter: brightness(1.04);
-
-    transform:
-        translateY(-1px);
+.guess-button:hover {
+    transform: none;
+    filter: none;
 }
+.guess-button:disabled {
 
-#guessButton:disabled {
-    opacity: .45;
+    opacity: 0.5;
 
     cursor: not-allowed;
 
-    transform: none;
 }
 
 
@@ -869,73 +899,44 @@ body {
    BUTTONS
    ========================================================= */
 
-.buttons {
-    display: grid;
+.button-area {
 
-    grid-template-columns:
-        1fr 1fr;
+    display: flex;
 
-    gap: 8px;
+    justify-content: center;
 
-    margin-top: 10px;
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 15px;
+
 }
 
-.continue,
-.reset {
+.continue-button {
+
+    padding: 12px 20px;
+
     border: none;
 
-    border-radius: 11px;
+    border-radius: 12px;
 
-    padding: 11px;
+    background: #8d77c9;
 
-    font-weight: 1000;
+    color: white;
+
+    font-weight: bold;
 
     cursor: pointer;
 
-    transition:
-        transform .15s,
-        filter .15s;
 }
 
-.continue {
-    background:
-        linear-gradient(
-            145deg,
-            #a8d8b5,
-            #7fbd93
-        );
+.continue-button:disabled {
 
-    color: #fff;
-
-    box-shadow:
-        0 3px 7px rgba(112,174,132,.16);
-}
-
-.continue:hover,
-.reset:hover {
-    filter: brightness(1.04);
-
-    transform:
-        translateY(-1px);
-}
-
-.continue:disabled {
-    opacity: .35;
+    opacity: 0.5;
 
     cursor: not-allowed;
 
-    transform: none;
-}
-
-.reset {
-    background:
-        linear-gradient(
-            145deg,
-            #f6d7e4,
-            #eab8cd
-        );
-
-    color: #8d5670;
 }
 
 
@@ -943,563 +944,415 @@ body {
    INFO
    ========================================================= */
 
-#info {
+.info {
+
+    margin-top: 15px;
+
+    min-height: 25px;
+
     text-align: center;
 
-    font-size: 11px;
+    font-weight: bold;
 
-    font-weight: 700;
-
-    color: #b18a9d;
-
-    margin-top: 9px;
 }
 
 
 /* =========================================================
-   📱 MOBILE - TỐI ƯU CHO ĐIỆN THOẠI
+   MOBILE
    ========================================================= */
 
-@media (max-width: 520px) {
-
-    /* =========================
-       KHUNG CHÍNH
-       ========================= */
-
-    body {
-        padding: 5px;
-
-        overflow-x: hidden;
-
-        align-items: flex-start;
-    }
+@media (max-width: 700px) {
 
     .game {
-        width: 100%;
-        max-width: 100%;
 
-        padding: 10px;
+        width: 96%;
 
-        border-radius: 20px;
+        padding: 15px;
 
-        margin: 0;
+        margin: 10px auto;
 
-        overflow: hidden;
     }
-
-
-    /* =========================
-       TITLE
-       ========================= */
 
     .title {
-        font-size: 24px;
 
-        letter-spacing: 1px;
+        font-size: 30px;
 
-        line-height: 1.2;
     }
-
-    .subtitle {
-        font-size: 11px;
-
-        margin-bottom: 9px;
-    }
-
-
-    /* =========================
-       WELCOME
-       ========================= */
-
-    .welcome {
-        padding: 9px 8px;
-
-        margin-bottom: 9px;
-
-        border-radius: 14px;
-    }
-
-    .welcome-title {
-        font-size: 12px;
-
-        margin-bottom: 5px;
-    }
-
-    .welcome-text {
-        font-size: 10px;
-
-        line-height: 1.5;
-    }
-
-    .answer-note {
-        font-size: 10px;
-
-        padding: 3px 8px;
-    }
-
-
-    /* =========================
-       STATS
-       ========================= */
 
     .stats {
-        gap: 5px;
 
-        margin-bottom: 7px;
-    }
+        grid-template-columns:
+            repeat(2, 1fr);
 
-    .stat {
-        padding: 6px 2px;
-
-        border-radius: 11px;
-
-        min-width: 0;
-    }
-
-    .stat-title {
-        font-size: 8px;
-    }
-
-    .stat-value {
-        font-size: 15px;
-
-        white-space: nowrap;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-    }
-
-
-    /* =========================
-       PROGRESS
-       ========================= */
-
-    .progress-box {
-        margin-bottom: 8px;
-    }
-
-    .progress-text {
-        font-size: 9px;
-
-        margin-bottom: 4px;
-    }
-
-    .progress {
-        height: 6px;
-    }
-
-
-    /* =========================
-       CHỦ ĐỀ
-       ========================= */
-
-    .topic-screen {
-        margin: 8px 0;
-    }
-
-    .topic-heading {
-        font-size: 13px;
-
-        margin: 6px 0;
-    }
-
-    .topic-description {
-        font-size: 10px;
-
-        line-height: 1.4;
-
-        margin: 5px 0;
     }
 
     .topic-grid {
-        grid-template-columns: 1fr;
 
-        gap: 7px;
+        grid-template-columns:
+            repeat(2, 1fr);
 
-        margin-top: 8px;
-    }
-
-    .topic-button {
-        padding: 10px 7px;
-
-        border-radius: 12px;
-    }
-
-    .topic-button-title {
-        font-size: 12px;
-
-        margin-bottom: 3px;
-    }
-
-    .topic-button-desc {
-        font-size: 9px;
-    }
-
-    .restart-topic-button {
-        padding: 9px;
-
-        margin-top: 8px;
-
-        font-size: 11px;
-    }
-
-
-    /* =========================
-       QUESTION
-       ========================= */
-
-    .question-box {
-        width: 100%;
-
-        min-height: 100px;
-
-        padding: 10px 10px;
-
-        margin-bottom: 8px;
-
-        border-radius: 14px;
-
-        overflow-wrap: anywhere;
-
-        word-break: break-word;
     }
 
     .question-text {
-        width: 100%;
 
-        font-size: 14px;
+        font-size: 18px;
 
-        line-height: 1.4;
-
-        white-space: pre-line;
-
-        overflow-wrap: anywhere;
-
-        word-break: break-word;
     }
 
-    .question-message {
-        font-size: 10px;
-
-        line-height: 1.4;
-
-        overflow-wrap: anywhere;
-    }
-
-    .answer-length {
-        font-size: 10px;
-
-        margin-top: 4px;
-    }
-
-
-    /* =========================
-       GIẢI THÍCH
-       ========================= */
-
-    .explanation-box {
-        width: 100%;
-
-        padding: 8px 10px;
-
-        margin-top: 7px;
-
-        margin-bottom: 7px;
-
-        border-radius: 11px;
-    }
-
-    .explanation-title {
-        font-size: 11px;
-
-        margin-bottom: 4px;
-    }
-
-    .explanation-text {
-        font-size: 10px;
-
-        line-height: 1.45;
-
-        white-space: pre-line;
-
-        overflow-wrap: anywhere;
-
-        word-break: break-word;
-    }
-
-
-    /* =========================
-       BOARD
-       ========================= */
-
-    #board {
-        width: 100%;
-
-        max-width: 100%;
-
-        margin: 8px 0;
-
-        padding: 0;
-
-        gap: 4px;
-
-        overflow: hidden;
-    }
-
-    .row {
-        width: 100%;
-
-        max-width: 100%;
-
-        gap: 3px;
-
-        justify-content: center;
-
-        overflow: hidden;
-    }
-
-    .cell {
-        /*
-           Không dùng width cố định.
-           JS createBoard() vẫn được phép
-           tính kích thước ô.
-        */
-
-        max-width: 44px;
-
-        max-height: 44px;
-
-        border-radius: 8px;
-
-        font-size: 14px;
-    }
-
-
-    /* =========================
-       INPUT + NÚT ĐOÁN
-       ========================= */
-
-    .input-area {
-        width: 100%;
-
-        gap: 5px;
-
-        margin-top: 6px;
-    }
-
-    #guessInput {
-        width: 100%;
-
-        min-width: 0;
-
-        padding: 9px 7px;
+    .hint-text {
 
         font-size: 16px;
 
-        border-radius: 9px;
-    }
-
-    #guessButton {
-        flex: 0 0 auto;
-
-        padding: 0 12px;
-
-        font-size: 12px;
-
-        border-radius: 9px;
-    }
-
-
-    /* =========================
-       BUTTONS
-       ========================= */
-
-    .buttons {
-        width: 100%;
-
-        gap: 5px;
-
-        margin-top: 7px;
-    }
-
-    .continue,
-    .reset {
-        min-width: 0;
-
-        padding: 9px 4px;
-
-        font-size: 10px;
-
-        border-radius: 9px;
-
-        white-space: normal;
-
-        line-height: 1.2;
-    }
-
-
-    /* =========================
-       INFO
-       ========================= */
-
-    #info {
-        font-size: 9px;
-
-        line-height: 1.4;
-
-        margin-top: 7px;
-
-        overflow-wrap: anywhere;
-    }
-
-
-    /* =========================
-       LEVEL UP / QUÀ
-       ========================= */
-
-    .level-up {
-        padding: 7px;
-
-        margin-bottom: 7px;
-
-        font-size: 11px;
-    }
-
-    .gift-message {
-        padding: 9px;
-
-        margin: 7px 0;
-
-        font-size: 11px;
-    }
-}
-
-
-/* =========================================================
-   📱 ĐIỆN THOẠI RẤT NHỎ
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-    body {
-        padding: 3px;
-    }
-
-    .game {
-        padding: 8px;
-
-        border-radius: 17px;
-    }
-
-    .title {
-        font-size: 21px;
-    }
-
-    .subtitle {
-        font-size: 10px;
-    }
-
-    .question-text {
-        font-size: 13px;
-    }
-
-    .question-box {
-        padding: 8px;
     }
 
     .cell {
-        max-width: 38px;
 
-        max-height: 38px;
+        width: 43px;
+
+        height: 43px;
+
+        font-size: 18px;
+
     }
 
-    #guessButton {
-        padding: 0 9px;
-
-        font-size: 11px;
-    }
-
-    .continue,
-    .reset {
-        font-size: 9px;
-
-        padding: 8px 3px;
-    }
 }
 
-.answer-length {
-    width: 100%;
-    margin-top: 5px;
-    color: #c86693;
-    font-size: 12px;
-    font-weight: 900;
-    text-align: center;
+@media (max-width: 520px) {
+
+    .topic-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .input-area {
+
+        flex-direction: column;
+
+    }
+
+    .guess-button {
+    width: 200px;
+    height: 48px;
+    min-height: 48px;
+    align-self: center;
+}
+
+    .cell {
+
+        width: 37px;
+
+        height: 37px;
+
+        font-size: 16px;
+
+    }
+
+    .board-row {
+
+        gap: 4px;
+
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
+
 <div class="game">
 
 
-    <!-- TITLE -->
+    <!-- =====================================================
+         TIÊU ĐỀ
+         ===================================================== -->
 
-    <div class="title">
+    <h1 class="title">
         Mini Game
-    </div>
+    </h1>
 
     <div class="subtitle">
         Đoán từ bí mật qua câu hỏi
     </div>
 
 
-    <!-- WELCOME -->
+    <!-- =====================================================
+         HƯỚNG DẪN
+         ===================================================== -->
 
-    <div class="welcome">
+    <div class="guide-box">
 
-        <div class="welcome-title">
-            👋 CHÀO BẠN ĐẾN VỚI TRÒ CHƠI!
-        </div>
+        <button
+            id="guideButton"
+            class="guide-button"
+            aria-expanded="false">
 
-        <div class="welcome-text">
+            📖 BẤM VÀO ĐỂ HƯỚNG DẪN CHƠI ▼
 
-            <div>
-                📝 CÂU TRẢ LỜI CÓ THỂ LÀ TIẾNG ANH HOẶC TIẾNG VIỆT NHÉ 😆
+        </button>
+
+
+        <div
+            id="guideContent"
+            class="guide-content hidden">
+
+
+            <h3>
+                🎮 CÁCH CHƠI
+            </h3>
+
+
+            <p>
+                👋 Chào mừng bạn đến với
+                <strong>Mini Game</strong>!
+                Hãy chọn một chủ đề và trả lời lần lượt các câu hỏi.
+            </p>
+
+
+            <h4>
+                ① 🎯 Chọn chủ đề
+            </h4>
+
+            <p>
+                Chọn một trong các chủ đề:
+            </p>
+
+            <ul>
+
+                <li>🍜 Ẩm thực</li>
+
+                <li>🏛️ Lịch sử</li>
+
+                <li>🎵 Âm nhạc</li>
+
+                <li>⚽ Thể thao</li>
+
+                <li>🌍 Địa Lí</li>
+
+                <li>📖 Văn Học</li>
+
+            </ul>
+
+            <p>
+                Mỗi chủ đề có
+                <strong>20 câu hỏi</strong>.
+            </p>
+
+
+            <h4>
+                ② 🧩 Đoán đáp án
+            </h4>
+
+            <p>
+                Đọc kỹ câu hỏi và nhập đáp án vào ô bên dưới.
+            </p>
+
+            <p>
+                Bạn có tối đa
+                <strong>6 lần đoán</strong>
+                cho mỗi câu.
+            </p>
+
+            <p>
+                💡 Độ dài đáp án được hiển thị bên dưới câu hỏi.
+            </p>
+
+
+            <h4>
+                ③ ⌨️ Nhập đáp án
+            </h4>
+
+            <p>
+                Bạn có thể nhập đáp án bằng chữ thường
+                hoặc chữ in hoa.
+            </p>
+
+            <p>
+                Ví dụ:
+                <br>
+
+                <strong>Ớt khô</strong>
+                →
+                <strong>ot kho</strong>
+                →
+                <strong>OT KHO</strong>
+
+                đều được tính là cùng một đáp án.
+            </p>
+
+            <p>
+                Dấu tiếng Việt và khoảng trắng
+                không ảnh hưởng đến việc kiểm tra đáp án.
+            </p>
+
+
+            <h4>
+                ④ 💡 Sử dụng gợi ý
+            </h4>
+
+            <p>
+                Nếu không biết đáp án,
+                bạn có thể sử dụng <strong>GỢI Ý</strong>.
+            </p>
+
+            <p>
+                Mỗi chữ cái được mở sẽ bị trừ
+                <strong>100 điểm</strong>.
+            </p>
+
+            <p>
+                   Khởi đầu sẽ có 100 điểm
+            </p>
+             
+             <p>
+                   Hoàn thành 1 câu trong 1 chủ đề sẽ có 50 điểm
+               </p>
+              <p>
+                ⚠️ Hãy sử dụng điểm thật cẩn thận!
+            </p>
+
+
+            <h4>
+                ⑤ 🏆 Hoàn thành chủ đề
+            </h4>
+
+            <p>
+                Mỗi chủ đề có <strong>20 câu</strong>.
+            </p>
+
+            <p>
+                Bạn phải trả lời đúng
+                <strong>tất cả 20 câu</strong>
+                để hoàn thành chủ đề.
+            </p>
+
+            <p>
+                ❌ Nếu trả lời sai một câu,bạn có thể chọn chơi tiếp hoặc chơi lại từ đầu  
+               
+                nhưng khi chơi xong vẫn hiện thị <strong>chưa hoàn thành chủ đề đó.</strong>
+
+            </p>
+
+
+            <h4>
+                ⑥ 📖 Xem giải thích
+            </h4>
+
+            <p>
+                Sau khi trả lời đúng,
+                game sẽ hiển thị phần
+                <strong>GIẢI THÍCH</strong>
+                để bạn biết thêm thông tin về đáp án.
+            </p>
+
+
+            <h4>
+                ⑦ 🎁 Hoàn thành tất cả
+            </h4>
+
+            <p> <strong>
+                Hãy cố gắng hoàn thành tất cả các chủ đề!
+            </p>
+
+            <p>
+                Khi hoàn thành toàn bộ game:
+            </p>
+
+          
+            <div class="guide-gift">
+
+    🎉 Liên hệ Tuân Võ để nhận quà nhé! 🎁
+    <br><br>
+
+    6000 ĐIỂM = 1 Ly trà sữa tùy bạn lựa max size + 1 phần bánh kem loại nhỏ
+    <br>
+
+    Dưới 6000 ĐIỂM → 5000 ĐIỂM = 1 Ly trà sữa tùy bạn lựa size nhỏ
+    <br>
+
+    Dưới 5000 ĐIỂM → 4000 ĐIỂM = 1 Phần bánh susu bánh bông lan
+    <br>
+
+    DƯỚI 4000 ĐIỂM → 3000 ĐIỂM = 1 Bánh bông lan
+    <br>
+
+    DƯỚI 3000 ĐIỂM → 2000 ĐIỂM = 1 Móc khóa
+    <br>
+
+    DƯỚI 2000 ĐIỂM → 1000 ĐIỂM = 1 lon nước ngọt
+    <br>
+
+    DƯỚI 1000 ĐIỂM → RA GẶP TUÂN VÕ ĐỂ BỊ LIU LIU 🤪🤪
+    <br><br>
+
+    <strong>
+        HOÀN THÀNH TẤT CẢ CHỦ ĐỀ, BẠN CHỤP ẢNH MÀN HÌNH SỐ ĐIỂM VÀ PHẦN HIỂN THỊ ĐÃ HOÀN THÀNH TẤT CẢ CHỦ ĐỀ.
+    </strong>
+</div>
+            <h4>
+                🔄 Chơi lại
+            </h4>
+
+            <p>
+                Muốn bắt đầu lại từ đầu?
+                Nhấn <strong>CHƠI LẠI TỪ ĐẦU</strong>.
+            </p>
+
+            <p>
+                Điểm số và tiến trình chủ đề
+                sẽ được đặt lại.
+            </p>
+
+
+            <div class="guide-note">
+
+                ⭐ <strong>MẸO:</strong>
+
+                Hãy đọc kỹ câu hỏi trước khi trả lời.
+                Đừng vội sử dụng gợi ý nếu bạn vẫn có thể
+                tự suy nghĩ ra đáp án!
+
             </div>
 
-            <div class="welcome-fun">
-                🎮 Chúc mọi người chơi zui zẻ hông quẹo nà!  😘
-            </div>
-
-            <div class="answer-note">
-                🎁 Chơi xong có quà nha! 😘
-            </div>
 
         </div>
 
     </div>
 
 
-    <!-- STATS -->
+    <!-- =====================================================
+         WELCOME
+         ===================================================== -->
+
+    <div class="welcome">
+
+        🎉 Chọn một chủ đề để bắt đầu!
+
+    </div>
+
+
+    <!-- =====================================================
+         STATS
+         ===================================================== -->
 
     <div class="stats">
 
         <div class="stat">
 
-            <div class="stat-title">
-                📚 CHỦ ĐỀ
+            <div class="stat-label">
+                CHỦ ĐỀ
             </div>
 
             <div
-                class="stat-value"
                 id="topicName"
-                style="font-size:13px"
-            >
-                Chưa chọn
+                class="stat-value">
+
+                -
+
             </div>
 
         </div>
@@ -1507,15 +1360,33 @@ body {
 
         <div class="stat">
 
-            <div class="stat-title">
-                ✅ ĐÚNG
+            <div class="stat-label">
+                ĐIỂM
             </div>
 
             <div
-                class="stat-value"
+                id="score"
+                class="stat-value">
+
+                100
+
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-label">
+                ĐÚNG
+            </div>
+
+            <div
                 id="totalCorrect"
-            >
+                class="stat-value">
+
                 0
+
             </div>
 
         </div>
@@ -1523,15 +1394,16 @@ body {
 
         <div class="stat">
 
-            <div class="stat-title">
-                📝 CÂU
+            <div class="stat-label">
+                TIẾN ĐỘ
             </div>
 
             <div
-                class="stat-value"
                 id="topicProgress"
-            >
-                0 / 20
+                class="stat-value">
+
+                -
+
             </div>
 
         </div>
@@ -1539,23 +1411,27 @@ body {
     </div>
 
 
-    <!-- PROGRESS -->
+    <!-- =====================================================
+         PROGRESS
+         ===================================================== -->
 
-    <div class="progress-box">
+    <div class="progress-area">
 
         <div
-            class="progress-text"
             id="progressText"
-        >
-            Hãy chọn một chủ đề để bắt đầu
+            class="progress-text">
+
+            0 / 20
+
         </div>
 
-        <div class="progress">
+        <div class="progress-container">
 
             <div
-                class="progress-bar"
                 id="progressBar"
-            ></div>
+                class="progress-bar">
+
+            </div>
 
         </div>
 
@@ -1567,270 +1443,359 @@ body {
          ===================================================== -->
 
     <div
-        class="topic-screen"
         id="topicScreen"
-    >
+        class="topic-screen">
 
-        <div
-            class="topic-heading"
+        <h2
             id="topicHeading"
-        >
-            🌸 CHỌN CHỦ ĐỀ BẠN MUỐN CHƠI 🌸
-        </div>
+            class="topic-heading">
+
+            🎯 CHỌN CHỦ ĐỀ
+
+        </h2>
 
         <div
-            class="topic-description"
             id="topicDescription"
-        >
-            🎯 Bạn tự chọn chủ đề. Câu hỏi trong chủ đề sẽ được random.
+            class="topic-description">
+
+            Chọn một chủ đề để bắt đầu chơi.
+
         </div>
 
+
         <div
-            class="topic-grid"
             id="topicGrid"
-        ></div>
+            class="topic-grid">
 
+        </div>
 
-        <!-- NÚT CHƠI LẠI NGAY TẠI ĐÂY -->
 
         <button
             id="restartTopicButton"
-            class="restart-topic-button"
-            type="button"
-        >
+            class="restart-topic-button">
+
             🔄 CHƠI LẠI TỪ ĐẦU
+
         </button>
 
 
         <div
-            class="gift-message hidden"
             id="giftMessage"
-        >
-            🎁 Liên hệ Tuân Võ để nhận quà nhé! 🎁
+            class="gift-message">
+
+            🎉 Liên hệ Tuân Võ để nhận quà nhé! 🎁
+
         </div>
 
     </div>
 
 
-    <!-- LEVEL UP -->
+    <!-- =====================================================
+         LEVEL UP / THÔNG BÁO
+         ===================================================== -->
 
     <div
-        class="level-up"
         id="levelUp"
-    >
-        🎉 HOÀN THÀNH CHỦ ĐỀ! 🎉
+        class="level-up"
+        style="display:none;">
+
+        <div class="level-up-title">
+
+            🏆 TOPIC ĐÃ HOÀN THÀNH
+
+        </div>
+
+        <div id="levelUpText">
+
+            Quá giỏi!
+
+        </div>
+
     </div>
 
 
-    <!-- GAME AREA -->
+    <!-- =====================================================
+         GAME AREA
+         ===================================================== -->
 
     <div
         id="gameArea"
-        class="hidden"
-    >
-
-        <div class="question-box">
-
-            <div
-                class="question-text"
-                id="questionBox"
-            >
-                Đang tải câu hỏi...
-            </div>
-
-            <div
-                class="question-message"
-                id="questionMessage"
-            ></div>
-
-            <div
-                class="answer-length"
-                id="answerLength"
-            ></div>
-
-        </div>
+        class="game-area">
 
 
-        <!-- =================================================
-             GIẢI THÍCH
-             ================================================= -->
+        <!-- QUESTION -->
 
         <div
-            class="explanation-box hidden"
-            id="explanationBox"
-        >
+            id="questionBox"
+            class="question-box">
 
-            <div class="explanation-title">
-                📖 GIẢI THÍCH
+            <div class="question-label">
+
+                ❓ CÂU HỎI
+
             </div>
 
             <div
-                class="explanation-text"
-                id="explanationText"
-            ></div>
+                id="questionMessage"
+                class="question-text">
+
+            </div>
+
+            <div
+                id="answerLength"
+                class="answer-length">
+
+            </div>
 
         </div>
 
 
-        <div id="board"></div>
+        <!-- EXPLANATION -->
 
+        <div
+            id="explanationBox"
+            class="explanation-box">
+
+            <div class="explanation-title">
+
+                📖 GIẢI THÍCH
+
+            </div>
+
+            <div
+                id="explanationText"
+                class="explanation-text">
+
+            </div>
+
+        </div>
+
+
+        <!-- HINT -->
+
+        <div
+            id="hintBox"
+            class="hint-box">
+
+            <div
+                id="hintText"
+                class="hint-text">
+
+                💡 Chưa có gợi ý
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- BOARD -->
+
+        <div
+            id="board"
+            class="board">
+
+        </div>
+
+
+        <!-- INPUT -->
 
         <div class="input-area">
 
             <input
-                type="text"
                 id="guessInput"
+                class="guess-input"
+                type="text"
                 autocomplete="off"
-                placeholder="Nhập đáp án..."
-            >
+                placeholder="Nhập đáp án...">
+
 
             <button
                 id="guessButton"
-                type="button"
-            >
+                class="guess-button">
+
                 ĐOÁN
+
             </button>
 
         </div>
 
 
-        <div class="buttons">
+        <!-- BUTTONS -->
+
+        <div class="button-area">
+
+            <button
+                id="hintButton"
+                class="hint-button">
+
+                💡 GỢI Ý
+
+            </button>
 
             <button
                 id="continueButton"
-                class="continue"
-                type="button"
-                disabled
-            >
-                ▶ CÂU TIẾP
+                class="continue-button"
+                disabled>
+
+                ▶ TIẾP TỤC
+
             </button>
+
 
             <button
                 id="resetButton"
-                class="reset"
-                type="button"
-            >
+                class="reset-button">
+
                 🔄 CHƠI LẠI TỪ ĐẦU
+
             </button>
 
         </div>
 
 
-        <div id="info">
-            Đang chuẩn bị...
+        <!-- INFO -->
+
+        <div
+            id="info"
+            class="info">
+
         </div>
 
+
     </div>
+
 
 </div>
 
 
 <script>
 
-
 /* =========================================================
-   CẤU HÌNH
+   DỮ LIỆU CÂU HỎI
    ========================================================= */
 
-const MAX_ROWS = 6;
+/*
+   GIỮ TOÀN BỘ CÂU HỎI CỦA BẠN Ở ĐÂY.
 
-const QUESTIONS_PER_TOPIC = 20;
+   Bạn đã xóa phần này khi gửi code cho mình
+   để giảm tải nên mình để ví dụ.
 
-
-/* =========================================================
-   BIẾN GAME
-   ========================================================= */
-
-let currentRow = 0;
-
-let currentQuestion = null;
-
-let gameOver = false;
-
-let totalCorrect = 0;
-
-let completedQuestions = 0;
-
-let activeTopic = null;
-
-let topicQuestions = [];
-
-let topicIndex = 0;
-
-let topicHasWrongAnswer = false;
-
-let retryScreen = false;
-
-let topicFinishScreen = false;
-
-let allTopicsFinished = false;
-
-let completedTopics = [];
-
-let playedQuestionKeys = new Set();
-
-
-/* =========================================================
-   CÂU HỎI
-   ========================================================= */
+   HÃY THAY phần ví dụ bằng danh sách câu hỏi thật
+   của bạn.
+*/
 
 const questions = [
 
-/* ==================== ẨM THỰC ==================== */
+    /* =========================================================
+   ẨM THỰC
+   ========================================================= */
 
-{level:1,question:"Món ăn nào của Ý có đế bột tròn, phủ phô mai và nhiều loại topping?",answer:"Pizza"},
-{level:1,question:"Loại hạt nào thực ra không phải là hạt mà là cây họ đậu?",answer:"Đậu phộng"},
-{level:1,question:"Quốc gia nào phát minh ra mì ăn liền?",answer:"Nhật Bản"},
-{level:1,question:"Loại quả nào có nhiều kali hơn chuối?",answer:"Bơ"},
-{level:1,question:"Loại quả nhỏ màu đỏ thường dùng làm nước ép?",answer:"Dâu"},
-{level:1,question:"Cà chua được xếp vào loại gì theo thực vật học",answer:"Trái cây"},
-{level:1,question:"Loại trái cây được mệnh danh là vua trái cây?",answer:"Sầu Riêng"},
-{level:1,question:"Loại trái cây được mệnh danh là nữ hoàng trái cây?",answer:"Măng Cụt"},
-{level:1,question:"Quế được lấy từ phần nào của cây?",answer:"Vỏ Cây"},
-{level:1,question:"Tàu hũ (đậu phụ) được làm từ loại đậu nào?",answer:"Đậu nành"},
-{level:1,question:"Bột năng được làm từ củ gì??",answer:"Củ sắn"},
-{level:1,question:"Loại đường nào không được tinh luyện hoàn toàn và còn chứa mật mía?",answer:"Đường nâu"},
-{level:1,question:"Loại hạt thường bị nhầm là hạt nhưng thực chất là phần nhân của hạch quả?",answer:"Hạnh nhân"},
+{level:1,question:"Món ăn nào của Ý có đế bột tròn, phủ phô mai và nhiều loại topping?",answer:"Pizza",explanation:"Pizza là món bánh nướng của Ý, gồm đế bột mì phủ sốt cà chua, phô mai và các loại nhân như thịt, hải sản hoặc rau củ, được nướng cho đến khi thơm ngon.🍕"},
+
+{level:1,question:"Loại hạt nào thực ra không phải là hạt mà là cây họ đậu?",answer:"Đậu phộng",explanation:"Đậu phộng là loại hạt giàu dinh dưỡng thuộc họ đậu, thường được dùng làm thực phẩm, chế biến thành nhiều món ăn và ép lấy dầu🥜"},
+
+{level:1,question:"Quốc gia nào phát minh ra mì ăn liền?",answer:"Nhật Bản",explanation:"Mì ăn liền đầu tiên trên thế giới được phát minh tại Nhật Bản vào năm 1958 bởi Momofuku Ando. Phát minh này giúp mọi người chuẩn bị bữa ăn nhanh chóng và tiện lợi. Từ đó, mì ăn liền dần phổ biến trên khắp thế giới."},
+
+{level:1,question:"Loại quả nào có nhiều kali hơn chuối?",answer:"Bơ",explanation:"🥑 Đáp án là bơ vì quả bơ chứa nhiều kali hơn chuối. Kali là một khoáng chất quan trọng giúp cơ thể duy trì hoạt động của cơ bắp, tim và hệ thần kinh. Mặc dù chuối rất nổi tiếng vì giàu kali, nhưng tính theo cùng khối lượng, bơ thường có hàm lượng kali cao hơn."},
+
+{level:1,question:"Loại quả nhỏ màu đỏ, có hạt bên ngoài thường dùng làm nước ép?",answer:"Dâu"},
+
+{level:1,question:"Cà chua được xếp vào loại gì theo thực vật học?",answer:"Trái cây",explanation:"🍅 Tại sao là trái cây? Vì cà chua mọc từ hoa và có hạt bên trong nên theo thực vật học, nó được xếp vào nhóm trái cây, dù nhiều người thường gọi là rau"},
+
+{level:1,question:"Loại trái cây được mệnh danh là vua trái cây?",answer:"Sầu Riêng",explanation:"vì sầu riêng được mệnh danh là vua của các loại trái cây nhờ kích thước lớn, hương vị đặc trưng và hàm lượng dinh dưỡng cao. Loại quả này rất được yêu thích ở nhiều nước Đông Nam Á và thường có giá trị kinh tế cao hơn nhiều loại trái cây khác"},
+
+{level:1,question:"Loại trái cây được mệnh danh là nữ hoàng trái cây?",answer:"Măng Cụt",explanation:"vì măng cụt được mệnh danh là nữ hoàng trái cây nhờ hương vị ngọt thanh, thơm ngon và vẻ ngoài đẹp mắt. Loại quả này thường được xem là sự kết hợp hoàn hảo với sầu riêng, loại quả được gọi là vua trái cây"},
+
+{level:1,question:"Quế được lấy từ phần nào của cây?",answer:"Vỏ Cây",explanation:"🌿 Đáp án là vỏ cây vì quế được lấy từ lớp vỏ bên trong của cây quế. Sau khi thu hoạch, vỏ được phơi hoặc sấy khô để tạo thành những thanh quế có mùi thơm đặc trưng dùng làm gia vị\n✅ Tác dụng Quế giúp tạo hương thơm cho món ăn, đồ uống, hỗ trợ giữ ấm cơ thể và thường được sử dụng trong y học cổ truyền."},
+
+{level:1,question:"Tàu hũ (đậu phụ) được làm từ loại đậu nào?",answer:"Đậu nành",explanation:"🌱 Đáp án là đậu nành vì tàu hũ (đậu phụ) được làm từ sữa đậu nành. Hạt đậu nành được ngâm, xay với nước, lọc lấy sữa rồi đông tụ để tạo thành những miếng đậu phụ mềm và giàu dinh dưỡng.\n✅ Tác dụng của tàu hũ là nguồn cung cấp protein thực vật tốt, chứa nhiều chất dinh dưỡng, dễ tiêu hóa và thường được sử dụng trong các món ăn chay cũng như món mặn"},
+
+{level:1,question:"Bột năng được làm từ củ gì?",answer:"Củ sắn",explanation:" Đáp án là củ sắn vì bột năng được sản xuất từ củ sắn (khoai mì). Củ sắn được nghiền, lọc lấy tinh bột rồi phơi hoặc sấy khô để tạo thành bột năng.\n✅ Tác dụng bột năng thường được dùng để tạo độ dai, dẻo và sánh cho các món ăn như chè, bánh, súp, nước sốt và trân châu."},
+
+{level:1,question:"Loại đường nào không được tinh luyện hoàn toàn và còn chứa mật mía?",answer:"Đường nâu",explanation:"🍯 Đáp án là đường nâu vì đường nâu không được tinh luyện hoàn toàn như đường trắng nên vẫn giữ lại một phần mật mía, tạo nên màu nâu đặc trưng và hương vị ngọt thơm nhẹ.\n✅ Tác dụng đường nâu thường được dùng trong làm bánh, pha đồ uống và nấu ăn để tăng màu sắc, mùi thơm cũng như tạo vị ngọt đậm đà hơn so với đường trắng."},
+
+{level:1,question:"Loại hạt thường bị nhầm là hạt nhưng thực chất là phần nhân của hạch quả?",answer:"Hạnh nhân",explanation:"🌰 Đáp án là hạnh nhân vì phần chúng ta ăn thực chất không phải là một hạt theo nghĩa thực vật học. Hạnh nhân là phần nhân nằm bên trong hạch quả của cây hạnh nhân. Khi lớp vỏ và phần thịt quả bên ngoài được loại bỏ, phần nhân bên trong sẽ được thu hoạch để làm thực phẩm.\n✅ Tác dụng Hạnh nhân giàu chất béo lành mạnh, protein, chất xơ, vitamin E và nhiều khoáng chất, tốt cho tim mạch và sức khỏe tổng thể"},
+
 {level:1,question:"Thứ gì càng khô càng cay?",answer:"Ớt khô"},
-{level:1,question:"Loại quả tên có chữ chanh nhưng không phải chanh?",answer:"Chanh dây"},
+
+{level:1,question:"Loại quả tên có chữ chanh nhưng không phải chanh\"đố mẹo\"?",answer:"Chanh dây"},
+
 {level:1,question:"Loại mì Nhật Bản thường ăn với nước dùng nóng?",answer:"Ramen"},
+
 {level:1,question:"Loại chè nào được nấu từ đậu xanh, bột báng và nước cốt dừa?",answer:"Chè bà ba"},
+
 {level:1,question:"Món ăn nào của Thổ Nhĩ Kỳ gồm thịt nướng cắt lát từ khối thịt lớn?",answer:"Kebab"},
-{level:1,question:"Tôi có vỏ nhưng không phải trái cây, bên trong có nhân thịt và tôm?",answer:"Há cảo"},
-{level:1,question:"Tôi là món ăn Hàn Quốc, càng để lâu càng chua?",answer:"Kimchi"},
-{level:1,question:"Thứ gì trong bếp có thể chảy nhưng không phải chất lỏng?",answer:"Phô mai"},
-{level:1,question:"Tôi không phải rau, không phải quả. Tôi được tạo ra từ đậu nành nhưng lại có thể thay thế thịt trong nhiều món ăn. Tôi là gì??",answer:"đậu hũ"},
+
+{level:1,question:"Tôi có vỏ nhưng không phải trái cây, bên trong có nhân thịt và tôm \"đố mẹo\"?",answer:"Há cảo"},
+
+{level:1,question:"Tôi là món ăn Hàn Quốc, càng để lâu càng chua?\"đố mẹo\"?",answer:"Kimchi"},
+
+{level:1,question:"Thứ gì trong bếp có thể chảy nhưng không phải chất lỏng \"đố mẹo\"?",answer:"Phô mai"},
+
+{level:1,question:"Tôi không phải rau, không phải quả. Tôi được tạo ra từ đậu nành nhưng lại có thể thay thế thịt trong nhiều món ăn. Tôi là gì \"đố mẹo\"?",answer:"đậu hũ"},
+
 {level:1,question:"Loại bánh của Mexico thường được gói nhân thịt?",answer:"Taco"},
+
 {level:1,question:"Loại cá dùng để làm trứng cá muối caviar?",answer:"Cá tầm"},
-{level:1,question:"Loại bánh không ăn được?",answer:"Bánh xe"},
-{level:1,question:"Gia vị nào ai cũng có?",answer:"Khẩu vị"},
-{level:1,question:"Món ăn nào càng nóng càng đông người?",answer:"lẩu"},
-{level:1,question:"Tôi có mắt nhưng không nhìn, có vỏ nhưng không mặc, có nước nhưng không bơi. Tôi là gì?",answer:"Thơm"},
-{level:1,question:"Tên tôi có chữ long, nhưng không phải con vật. Là quả gì",answer:"Thanh long"},
-{level:1,question:"Mặc áo gai, ruột vàng thơm ngát. Là quả gì?",answer:"Mít"},
-{level:1,question:"Quả gì có vỏ tím, ruột trắng trong như thạch?",answer:"Chôm chôm"},
+
+{level:1,question:"Trong ly có đá mát ghê\nThêm viên đen nhỏ thích mê vô cùng\nHút hoài chẳng muốn ngừng luôn.Là món nước gì ai thường gọi tên?\"đố mẹo\"?",answer:"Trà sữa trân châu"},
+
+{level:1,question:"Gia vị nào ai cũng có? \"đố mẹo\" ",answer:"Khẩu vị"},
+
+{level:1,question:"Món ăn nào càng nóng càng đông người \"đố mẹo\"?",answer:"lẩu"},
+
+{level:1,question:"Tôi có mắt nhưng không nhìn, có vỏ nhưng không mặc, có nước nhưng không bơi vậy tôi là là gì \"đố mẹo\"?",answer:"Thơm"},
+
+{level:1,question:"Tên tôi có chữ long, nhưng không phải con vật vậy tôi là quả gì \"đố mẹo\"?",answer:"Thanh long"},
+
+{level:1,question:" Tôi mặc áo gai, ruột vàng thơm ngát vậy tôi là quả gì \"đố mẹo\"?",answer:"Mít"},
+
+{level:1,question:"Quả gì có vỏ có lông, ruột trắng trong như thạch?",answer:"Chôm chôm"},
+
 {level:1,question:"Quả gì có nước bên trong mà không cần ép?",answer:"Dừa"},
+
 {level:1,question:"Loại quả nào tên chỉ có một âm tiết và vị rất chua?",answer:"Cóc"},
+
 {level:1,question:"Quả gì có múi nhưng không phải cam?",answer:"Bưởi"},
+
 {level:1,question:"Món gì tên có bò nhưng không có bò?",answer:"Bò bía"},
+
 {level:1,question:"Món gì vừa ăn vừa thổi?",answer:"Cháo"},
+
 {level:1,question:"Món gì càng cay càng nhiều người thích?",answer:"Tokbokki"},
-{level:1,question:"Món ăn nào ăn bằng thìa, thường được dùng khai vị và có nhiều nước?",answer:"Súp"},
-{level:1,question:"Món gì tên là một câu hỏi?",answer:"Bánh hỏi"},
-{level:1,question:"Món gì có đúc nhưng không xây nhà?",answer:"Bánh đúc"},
-{level:1,question:"Món gì tên là một màu sắc?",answer:"Phô mai"},
-{level:1,question:"Bánh gì có tên bộ phận cơ thể?",answer:"Tai Heo"},
-{level:1,question:"Món gì được gọi bằng tên con vật nhưng nguyên liệu chính không phải con vật đó?",answer:"Bánh da lợn"},
-{level:1,question:"Gạo + thịt + lá dong = Bánh?",answer:"Bánh chưng"},
-{level:1,question:"Bột gạo + nghệ + tôm thịt = Bánh?",answer:"Bánh xèo"},
+
+{level:1,question:"Món ăn nào ăn bằng thìa, thường được dùng khai vị và có nhiều nước\"đố mẹo\"?",answer:"Súp"},
+
+{level:1,question:"Món gì tên là một câu hỏi?\"đố mẹo\"?",answer:"Bánh hỏi"},
+
+{level:1,question:"Món gì có đúc nhưng không xây nhà\"đố mẹo\"?",answer:"Bánh đúc"},
+
+{level:1,question:"Món gì tên là một màu sắc\"đố mẹo\"?",answer:"Xôi gấc"},
+
+{level:1,question:"Bánh gì có tên bộ phận cơ thể\"đố mẹo\"?",answer:"Bánh tai Heo"},
+
+{level:1,question:"Bánh gì được gọi bằng tên con vật nhưng nguyên liệu chính không phải con vật đó\"đố mẹo\"?",answer:"Bánh da lợn"},
+
+{level:1,question:"Bánh gì vuông vức, gói lá xanh, bên trong có nếp, đậu và thịt?",answer:"Bánh chưng",explanation:"Vì bánh chưng có hình vuông, được gói bằng lá dong màu xanh, bên trong gồm gạo nếp, đậu xanh và thịt heo. Đây là những đặc điểm rất đặc trưng của bánh chưng nên chỉ cần nghe mô tả là có thể nhận ra ngay."},
+
+{level:1,question:"Đây là món gì Bột gạo + nghệ + tôm thịt = Bánh?",answer:"Bánh xèo"},
+
 {level:1,question:"Cơm nguội phơi khô + chiên giòn + kho quẹt = ?",answer:"Cơm cháy"},
-{level:1,question:"Bột gạo hấp đĩa nhỏ, ăn bằng que tre?",answer:"Bánh bèo"},
-{level:1,question:"Món gì nghe như một tòa nhà cao tầng?",answer:"Cao lầu"},
-{level:1,question:"Bún gì không có lửa vẫn nướng ?",answer:"Bún thịt nướng"},
-{level:1,question:"Ba anh em cùng họ, một nổi, một nằm, một lọc là ai?",answer:"Bèo Nậm Lọc"},
+
+{level:1,question:"Bánh gì trắng dẻo tròn đầy,Lang Liêu dâng lễ Vua Hùng ngày xưa",answer:"Bánh dày",explanation:"Bánh dày có màu trắng, hình tròn và dẻo, được làm từ gạo nếp giã nhuyễn. Theo truyền thuyết, Lang Liêu đã làm bánh dày để dâng lên Vua Hùng. Bánh dày tượng trưng cho bầu trời, còn bánh chưng tượng trưng cho mặt đất."},
+
+{level:1,question:"Bột trắng bọc thịt bên trong,Hấp lên nóng hổi, thơm lừng cả mâm.Là món gì?",answer:"Bánh bao"},
+
+{level:1,question:"Bún gì không có lửa vẫn nướng \"đố mẹo\"?",answer:"Bún thịt nướng"},
+
+{level:1,question:"Ba anh em cùng họ, một nổi, một nằm, một lọc là ai? \"đố mẹo\ ",answer:"Bèo Nậm Lọc"},
 
 
-/* ==================== LỊCH SỬ ==================== */
+/* =========================================================
+   LỊCH SỬ
+   ========================================================= */
 
 {level:2,question:"Người được gọi là Kẻ chinh phục thế giới ở thế kỷ XIII?",answer:"Thành Cát Tư Hãn"},
 {level:2,question:"Người đọc bản Tuyên ngôn Độc lập ngày 2/9/1945 là ai?",answer:"Hồ Chí Minh"},
@@ -1884,14 +1849,16 @@ const questions = [
 {level:2,question:"Nhà yêu nước nào được gọi là Ông già Bến Ngự?",answer:"Phan Bội Châu"},
 
 
-/* ==================== ÂM NHẠC ==================== */
+/* =========================================================
+   ÂM NHẠC
+   ========================================================= */
 
 {level:3,question:"Nhạc sĩ sáng tác bài Tiến quân ca là ai?",answer:"Văn Cao"},
 {level:3,question:"Loại nhạc cụ có 88 phím?",answer:"Piano"},
 {level:3,question:"Vua nhạc Pop được nhắc đến nhiều nhất thế giới là ai?",answer:"Michael Jackson"},
 {level:3,question:"Bài hát nào giúp Jack trở thành hiện tượng V-pop năm 2019?",answer:"Hồng nhan"},
 {level:3,question:"Nhắc đến Thái Bình người ta nghĩ đến ai ?",answer:"Sơn Tùng MTP"},
-{level:3,question:"Loại nhạc cụ nào có 1 dây đàn?",answer:"đàn bầu"},
+{level:3,question:"Loại nhạc cụ nào có 1 dây?",answer:"đàn bầu"},
 {level:3,question:"Ai được mệnh danh là Họa mi tóc nâu của V-pop?",answer:"Mỹ Tâm"},
 {level:3,question:"Bài hát nào có câu mở đầu Từ Bắc vô Nam nối liền nắm tay...?",answer:"Nối vòng tay lớn"},
 {level:3,question:"Bài hát nào gắn liền với Mỹ Linh những năm đầu sự nghiệp?",answer:"Hương ngọc lan"},
@@ -1924,19 +1891,23 @@ const questions = [
 {level:3,question:"Nhạc cụ nào giống guitar nhưng nhỏ hơn?",answer:"Ukulele"},
 {level:3,question:"Ca sĩ nào được gọi là Hoàng tử mưa?",answer:"Trung Quân"},
 {level:3,question:"Ai là giọng ca chính của bài Baby?",answer:"Justin Bieber"},
-{level:3,question:" 🏞️ + ⚪🦪 + 🦛= 🤔?",answer:"Hồ Ngọc Hà"},
+{level:3,question:"🏞️ + ⚪🦪 + 🦛= 🤔?",answer:"Hồ Ngọc Hà"},
 {level:3,question:"❄️ + 👶= 🤔?",answer:"Đông Nhi"},
-{level:3,question:" 🔋+ 💤 ?",answer:"Binz"},
+{level:3,question:"🔋+ 💤 ?",answer:"Binz"},
 {level:3,question:"Ca sĩ 🍊 này là ai?",answer:"Orange"},
 {level:3,question:"Rapper này 🐥 là ai ?",answer:"Gducky"},
-{level:3,question:" Ca sĩ này 🍸 🍸 là ai?",answer:"Ly Ly"},
+{level:3,question:"Ca sĩ này 🍸 🍸 là ai?",answer:"Ly Ly"},
 {level:3,question:"Bài hát này 👀 + ❤️ là gì?",answer:"See Tình"},
 {level:3,question:"Bài hát này ✅ + ➡️ + ❌ là gì ?",answer:"Đúng cũng thành sai"},
-{level:3,question:"Bài hát này  👐 + 💰 + ➡️ + 👩‍👧 là gì?",answer:"Mang tiền về cho mẹ"},
+{level:3,question:"Bài hát này 👐 + 💰 + ➡️ + 👩‍👧 là gì?",answer:"Mang tiền về cho mẹ"},
 {level:3,question:"Bài hát này 👧🏻+ 🌧️ là gì ?",answer:"Em gái mưa"},
 {level:3,question:"Rapper này 🍼 +🪙 là ai ?",answer:"Bình Gold"},
 {level:3,question:"Nhạc cụ nào có 16 dây và thường được đặt ngang để gảy?",answer:"Đàn tranh"},
 
+
+/* =========================================================
+   THỂ THAO
+   ========================================================= */
 
 {level:4,question:"Cầu thủ nào được mệnh danh là Vua bóng đá?",answer:"Pele"},
 {level:4,question:"Ai được mệnh danh là El Pulga?",answer:"Messi"},
@@ -1944,10 +1915,10 @@ const questions = [
 {level:4,question:"Cầu thủ nào có biệt danh Hoàng tử thành Rome?",answer:"Totti"},
 {level:4,question:"CLB nào có biệt danh Rossoneri??",answer:"AC Milan"},
 {level:4,question:"Cầu thủ này 🐢+🥷 là ai?",answer:"Mbappé"},
-{level:4,question:"Cầu thủ này 🇵🇹 + 💪 + 7️⃣ + 🐐  là ai ?",answer:"Ronaldo CR7"},
+{level:4,question:"Cầu thủ này 🇵🇹 + 💪 + 7️⃣ + 🐐 là ai ?",answer:"Ronaldo CR7"},
 {level:4,question:"Cầu thủ này 👽 + ⚽ là ai?",answer:"Ronaldo"},
 {level:4,question:"Câu lạc bộ này 🔵 + 👑🦁 là?",answer:"Chelse"},
-{level:4,question:" Biệt danh Lữ đoàn đỏ là của?",answer:"Liverpool"},
+{level:4,question:"Biệt danh Lữ đoàn đỏ là của?",answer:"Liverpool"},
 {level:4,question:"Câu lạc bộ này 🔴 + 🧨 là?",answer:"Arsenal"},
 {level:4,question:"Câu lạc bộ này ⚪+👑+🏆?",answer:"Real Madrid"},
 {level:4,question:"Từ Fergie time bắt nguồn từ câu lạc bộ nào?",answer:"Manchester United"},
@@ -1957,9 +1928,9 @@ const questions = [
 {level:4,question:"Vận động viên bóng rổ có một hãng giày riêng là ai .?",answer:"Jordan"},
 {level:4,question:"Lần đầu tiên VN vô địch AFF cup là khi nào ?",answer:"2008"},
 {level:4,question:"Vận động viên espost của VN được mệnh danh thần rừng là ai?",answer:"Levi"},
-{level:4,question:"Nhắc tới Qủy vương bất tử là biệt danh của tuyển thủ nào  ?",answer:"Faker"},
+{level:4,question:"Nhắc tới Qủy vương bất tử là biệt danh của tuyển thủ nào ?",answer:"Faker"},
 {level:4,question:"Thủ môn lần đầu tiên được quả bóng vàng là ai ?",answer:"Yashin"},
-{level:4,question:"Cầu thủ được mệnh danh là người ba phổi là ai ?",answer:" Park Ji Sung"},
+{level:4,question:"Cầu thủ được mệnh danh là người ba phổi là ai ?",answer:"Park Ji Sung"},
 {level:4,question:"Cầu thủ được mệnh danh Vũ công cuối cùng của Brasil là ai ?",answer:"Neymar"},
 {level:4,question:"Đêm Istanbul huyền thoại là nói đến CLB nào ?",answer:"AC Milan"},
 {level:4,question:"Cầu thủ được mệnh danh chiến binh Viking là ai ?",answer:"haaland"},
@@ -1990,7 +1961,9 @@ const questions = [
 {level:4,question:"Ai ghi bàn bằng tay nổi tiếng tại World Cup 1986?",answer:"Maradona"},
 
 
-/* ==================== Địa Lí ==================== */
+/* =========================================================
+   ĐỊA LÍ
+   ========================================================= */
 
 {level:5,question:"Thăng Long là tên cũ của thành phố nào hiện nay?",answer:"Hà Nội"},
 {level:5,question:"Có bao nhiêu kỳ quan thế giới cổ đại?",answer:"7"},
@@ -2030,7 +2003,7 @@ const questions = [
 {level:5,question:"Điểm cực Đông của Việt Nam thuộc tỉnh nào?",answer:"Khánh Hòa"},
 {level:5,question:"Điểm cực Tây của Việt Nam thuộc tỉnh nào?",answer:"Điện Biên"},
 {level:5,question:"Rồng bay là Thăng Long, rồng đáp là ở đâu của Việt Nam?",answer:"Hạ Long"},
-{level:5,question:"Tiền vào là Đồng Nai, tiền ra là đâu?",answer:"Đồng Tháp"},		
+{level:5,question:"Tiền vào là Đồng Nai, tiền ra là đâu?",answer:"Đồng Tháp"},
 {level:5,question:"Tỉnh nào nghe tên là biết rất giàu?",answer:"Bạc Liêu"},
 {level:5,question:"Tỉnh nào nghe như một lời chúc?",answer:"Bình Phước"},
 {level:5,question:"Di tích nào là nơi Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập?",answer:"Quảng trường Ba Đình"},
@@ -2043,7 +2016,10 @@ const questions = [
 {level:5,question:"Tên gọi nào gắn liền với biệt danh Hòn ngọc Viễn Đông?",answer:"Sài Gòn"},
 {level:5,question:"Thành phố nào từng là kinh đô của Việt Nam dưới triều Nguyễn?",answer:"Huế"},
 
-/* ==================== Văn Học ==================== */
+
+/* =========================================================
+   VĂN HỌC
+   ========================================================= */
 
 {level:6,question:"Tôi là đại thi hào dân tộc, được UNESCO vinh danh.Tác phẩm nổi tiếng nhất của tôi kể về cuộc đời nàng Kiều.Tôi là ai?",answer:"Nguyễn Du"},
 {level:6,question:"Tác phẩm nào có các nhân vật Mị và A Phủ?",answer:"Vợ chồng A Phủ"},
@@ -2073,7 +2049,7 @@ const questions = [
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Nguyễn Khoa Điềm?\nKhi ta lớn lên Đất Nước đã có rồi\nĐất Nước có trong những cái \"ngày xửa ngày xưa...\"mẹ thường hay kể\nĐất Nước bắt đầu với miếng trầu bây giờ bà ăn",answer:"Đất Nước"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Chính Hữu?\nQuê hương anh nước mặn đồng chua\nLàng tôi nghèo đất cày lên sỏi đá\nAnh với tôi đôi người xa lạ\nTự phương trời chẳng hẹn quen nhau",answer:"Đồng chí"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Viễn Phương?\nNgày ngày mặt trời đi qua trên lăng\nThấy một mặt trời trong lăng rất đỏ\nNgày ngày dòng người đi trong thương nhớ\nKết tràng hoa dâng bảy mươi chín mùa xuân",answer:"Viếng lăng Bác"},
-{level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Hàn Mặc Tử?\nSao anh không về chơi thôn Vĩ\nNhìn nắng hàng cau nắng mới lên\nVườn ai mướt quá xanh như ngọc\n\Lá trúc che ngang mặt chữ điền",answer:"Huế"},
+{level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Hàn Mặc Tử?\nSao anh không về chơi thôn Vĩ\nNhìn nắng hàng cau nắng mới lên\nVườn ai mướt quá xanh như ngọc\nLá trúc che ngang mặt chữ điền",answer:"Huế"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của Bác Hồ?\nTiếng suối trong như tiếng hát xa\nTrăng lồng cổ thụ bóng lồng hoa\nCảnh khuya như vẽ người chưa ngủ\nChưa ngủ vì lo nỗi nước nhà",answer:"Cảnh khuya"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Hồ Xuân Hương?\nThân em vừa trắng lại vừa tròn\nBảy nổi ba chìm với nước non\nRắn nát mặc dầu tay kẻ nặn\nMà em vẫn giữ tấm lòng son",answer:"Bánh trôi nước"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Tố Hữu?\nMình về mình có nhớ ta\nTa về ta nhớ những hoa cùng người\nRừng xanh hoa chuối đỏ tươi\nĐèo cao nắng ánh dao gài thắt lưng",answer:"Việt Bắc"},
@@ -2082,12 +2058,12 @@ const questions = [
 {level:6,question:"Nhân vật nào trong tác phẩm bán người bạn thân nhất của mình rồi khóc suốt đêm của nhà văn Nam Cao?",answer:"Lão Hạc"},
 {level:6,question:"Món ăn nào của Thị Nở khiến Chí Phèo thức tỉnh phần người??",answer:"cháo hành"},
 {level:6,question:"Nhân vật lão Hạc trong truyện cùng tên đã gửi ai mảnh vườn để giữ cho con trai?",answer:"Ông giáo"},
-{level:6,question:"Ai là người phụ nữ nổi tiếng với câu nói\"Thà ngồi tù. Để chúng nó làm tình làm tội mãi thế, tôi không chịu được\"",answer:"Chị Dậu"},
+{level:6,question:"Ai là người phụ nữ nổi tiếng với câu nói \"Thà ngồi tù. Để chúng nó làm tình làm tội mãi thế, tôi không chịu được\"",answer:"Chị Dậu"},
 {level:6,question:"Tác phẩm 'Người lái đò Sông Đà của nhà văn nào?",answer:"Nguyễn Tuân"},
 {level:6,question:"Trong tác phẩm Vợ chồng A Phủ, loại lá nào xuất hiện nhiều lần như biểu tượng cho sự bế tắc trong cuộc đời Mị?",answer:"Lá ngón"},
 {level:6,question:"Trong tác phẩm nào, người vợ theo không về làm vợ chỉ sau một câu hò đùa và 4 bát bánh đúc?",answer:"Vợ nhặt"},
 {level:6,question:"Tác phẩm nào có các nhân vật: Phùng, Đẩu, người đàn bà hàng chài, thằng Phác là tác phẩm nào?",answer:"Chiếc thuyền ngoài xa"},
-{level:6,question:"Nguyên nhân dẫn đến cái chết của nhân vật 'Lão Hạc'?",answer:"bả chó",explanation:"Vì sao nhân vật Lão Hạc chọn 'bả chó' mà không phải thứ khác để ra đi thanh thản\n Vì Lão Hạc đã từng bán Cậu Vàng, con chó mà lão rất yêu quý. Việc dùng bả chó để kết thúc cuộc đời khiến cái chết của lão trở nên đau đớn, dữ dội, đồng thời thể hiện sự dằn vặt và bi kịch của số phận người nông dân nghèo"},
+{level:6,question:"Nguyên nhân dẫn đến cái chết của nhân vật 'Lão Hạc'?",answer:"bả chó",explanation:"Vì sao nhân vật Lão Hạc chọn 'bả chó' mà không phải thứ khác để ra đi thanh thản\nVì Lão Hạc đã từng bán Cậu Vàng, con chó mà lão rất yêu quý. Việc dùng bả chó để kết thúc cuộc đời khiến cái chết của lão trở nên đau đớn, dữ dội, đồng thời thể hiện sự dằn vặt và bi kịch của số phận người nông dân nghèo"},
 {level:6,question:"Nhà văn nào được mệnh danh là nhà văn của người nông dân Việt Nam trước Cách mạng?",answer:"Nam Cao"},
 {level:6,question:"Tác Phẩm 'Vợ Nhặt' của tác giả nào?",answer:"Kim Lân"},
 {level:6,question:"Nhà văn William Shakespeare là tác giả của tác phẩm kinh điển nào kể về chuyện tình của hai thiếu niên trẻ tuổi?",answer:"Romeo và Juliet",explanation:"Romeo và Juliet là một vở bi kịch nổi tiếng của William Shakespeare, kể về tình yêu giữa hai người trẻ thuộc hai dòng họ thù địch nhau\nCuối cùng Romeo tưởng Juliet đã chết nên uống thuốc độc tự tử. Khi Juliet tỉnh dậy, thấy Romeo đã chết, nàng cũng tự kết liễu đời mình"},
@@ -2095,85 +2071,146 @@ const questions = [
 {level:6,question:"Tác giả nào viết Những ngôi sao xa xôi, nổi tiếng với các tác phẩm về tuổi trẻ trong kháng chiến chống Mỹ?",answer:"Lê Minh Khuê"},
 {level:6,question:"Tác giả nào sáng tạo ra một thế giới côn trùng có tính cách như con người, với các nhân vật nổi tiếng như Dế Mèn, Dế Choắt, Dế Trũi?",answer:"Tô Hoài"},
 {level:6,question:"Người phụ nữ nào trong văn học Việt Nam nổi tiếng với ;ma chê quỷ hờn' nhưng lại khiến một người đàn ông vừa đi vừa chửi rung động?",answer:"Thị Nở"},
-{level:6,question:"Người con gái 'sắc sảo mặn mà', tài sắc vẹn toàn trong Truyện Kiều là ai?",answer:"Thúy Kiều"},
+{level:6,question:"Người con gái 'sắc sảo mặn mà', tài sắc vẹn toàn trong Truyện Kiều là ai?",answer:"Thúy Kiều"}
 
 ];
 
+
 /* =========================================================
-   ELEMENT
+   CẤU HÌNH GAME
    ========================================================= */
 
-const input =
-    document.getElementById("guessInput");
+const MAX_ROWS = 6;
 
-const board =
-    document.getElementById("board");
+const QUESTIONS_PER_TOPIC = 20;
 
-const info =
-    document.getElementById("info");
+const START_SCORE = 100;
 
-const questionBox =
-    document.getElementById("questionBox");
-
-const questionMessage =
-    document.getElementById("questionMessage");
+const SCORE_STORAGE_KEY = "wordleScoreV3";
 
 
 /* =========================================================
-   ELEMENT GIẢI THÍCH
+   BIẾN GAME
    ========================================================= */
 
-const explanationBox =
-    document.getElementById("explanationBox");
+let currentRow = 0;
 
-const explanationText =
-    document.getElementById("explanationText");
+let currentQuestion = null;
+
+let gameOver = false;
+
+let totalCorrect = 0;
+
+let completedQuestions = 0;
+
+let activeTopic = null;
+
+let topicQuestions = [];
+
+let topicIndex = 0;
+
+let topicHasWrongAnswer = false;
+
+let retryScreen = false;
+
+let topicFinishScreen = false;
+
+let allTopicsFinished = false;
+
+let completedTopics = [];
+
+let playedQuestionKeys = new Set();
+
+let revealedPositions = new Set();
 
 
-const guessButton =
-    document.getElementById("guessButton");
+/* =========================================================
+   SCORE
+   ========================================================= */
 
-const continueButton =
-    document.getElementById("continueButton");
+// Mỗi lần mở lại trang game, điểm bắt đầu từ 100.
+let score = START_SCORE;
 
-const resetButton =
-    document.getElementById("resetButton");
+/* =========================================================
+   TOPIC
+   ========================================================= */
 
-const restartTopicButton =
-    document.getElementById("restartTopicButton");
+function getTopicForQuestion(q) {
 
-const totalCorrectElement =
-    document.getElementById("totalCorrect");
+    if (q.level === 1)
+        return "Ẩm thực";
 
-const topicProgressElement =
-    document.getElementById("topicProgress");
+    if (q.level === 2)
+        return "Lịch sử";
 
-const progressText =
-    document.getElementById("progressText");
+    if (q.level === 3)
+        return "Âm nhạc";
 
-const progressBar =
-    document.getElementById("progressBar");
+    if (q.level === 4)
+        return "Thể thao";
 
-const levelUp =
-    document.getElementById("levelUp");
+    if (q.level === 5)
+        return "Địa Lí";
 
-const giftMessage =
-    document.getElementById("giftMessage");
+    if (q.level === 6)
+        return "Văn Học";
 
-const topicHeading =
-    document.getElementById("topicHeading");
+    return "Khác";
 
-const topicDescriptionElement =
-    document.getElementById("topicDescription");
+}
 
-const topicGrid =
-    document.getElementById("topicGrid");
 
-const topicScreen =
-    document.getElementById("topicScreen");
+const topicDescriptions = {
 
-const gameArea =
-    document.getElementById("gameArea");
+    "Ẩm thực":
+        "🍜 Món ăn, trái cây và nguyên liệu 🍜",
+
+    "Lịch sử":
+        "🏛️ Nhân vật và sự kiện lịch sử 🏛️",
+
+    "Âm nhạc":
+        "🎵 Ca sĩ, nhạc cụ và bài hát 🎵",
+
+    "Thể thao":
+        "⚽ Cầu thủ, biệt danh, câu lạc bộ ⚽",
+
+    "Địa Lí":
+        "🌎 Quốc gia, di tích, sông hồ 🚩",
+
+    "Văn Học":
+        "📖 Thơ, nhà văn, tiểu thuyết và tác phẩm"
+
+};
+
+
+const topicIcons = {
+
+    "Ẩm thực": "🍜",
+
+    "Lịch sử": "🏛️",
+
+    "Âm nhạc": "🎵",
+
+    "Thể thao": "⚽",
+
+    "Địa Lí": "🌍",
+
+    "Văn Học": "📖"
+
+};
+
+
+/* =========================================================
+   LẤY DANH SÁCH CHỦ ĐỀ
+   ========================================================= */
+
+function getAllTopics() {
+
+    return Object.keys(
+        topicDescriptions
+    );
+
+}
 
 
 /* =========================================================
@@ -2207,133 +2244,7 @@ function normalizeWord(word) {
             /[^A-Z0-9]/g,
             ""
         );
-}
 
-
-/* =========================================================
-   XÁC ĐỊNH CHỦ ĐỀ
-   ========================================================= */
-
-function getTopicForQuestion(q) {
-
-    if (q.level === 1) {
-        return "Ẩm thực";
-    }
-
-    if (q.level === 2) {
-        return "Lịch sử";
-    }
-
-    if (q.level === 3) {
-        return "Âm nhạc";
-    }
-
-    if (q.level === 4) {
-        return "Thể thao";
-    }
-
-    if (q.level === 5) {
-        return "Địa Lí";
-    }
-
-    if (q.level === 6) {
-        return "Văn Học";
-    }
-
-    return "Khác";
-}
-
-
-/* =========================================================
-   MÔ TẢ CHỦ ĐỀ
-   ========================================================= */
-
-const topicDescriptions = {
-
-    "Ẩm thực":
-        "🍜 Món ăn, trái cây và nguyên liệu🍜",
-
-    "Lịch sử":
-        "🏛️ Nhân vật và sự kiện lịch sử🏛️",
-
-    "Âm nhạc":
-        " 🎵 Ca sĩ, nhạc cụ và bài hát🎵",
-
-    "Thể thao":
-        " ⚽ Cầu thủ,biệt danh, câu lạc bộ ⚽",
-
-    "Địa Lí":
-        "🌎 Quốc gia,di tích,sông hồ🚩",
-
-    "Văn Học":
-        " 📖 Thơ,nhà văn,tiểu thuyết và tác phẩm ",
-};
-
-
-/* =========================================================
-   ICON CHỦ ĐỀ
-   ========================================================= */
-
-const topicIcons = {
-
-    "Ẩm thực": "🍜",
-
-    "Lịch sử": "🏛️",
-
-    "Âm nhạc": "🎵",
-
-    "Thể thao": "⚽",
-
-    "Địa Lí": "🌍",
-
-    "Văn Học": "📖",
-
-};
-
-
-/* =========================================================
-   LẤY TẤT CẢ CHỦ ĐỀ
-   ========================================================= */
-
-function getAllTopics() {
-
-    return Object.keys(
-        topicDescriptions
-    );
-}
-
-
-/* =========================================================
-   RANDOM MẢNG
-   ========================================================= */
-
-function shuffleArray(array) {
-
-    const result =
-        [...array];
-
-    for (
-        let i = result.length - 1;
-        i > 0;
-        i--
-    ) {
-
-        const j =
-            Math.floor(
-                Math.random() * (i + 1)
-            );
-
-        [
-            result[i],
-            result[j]
-        ] =
-        [
-            result[j],
-            result[i]
-        ];
-    }
-
-    return result;
 }
 
 
@@ -2344,12 +2255,76 @@ function shuffleArray(array) {
 function getQuestionKey(q) {
 
     return (
-        getTopicForQuestion(q)
-        + "|"
-        + normalizeWord(q.question)
-        + "|"
-        + normalizeWord(q.answer)
+        String(q.level) +
+        "|" +
+        String(q.question) +
+        "|" +
+        String(q.answer)
     );
+
+}
+
+
+/* =========================================================
+   XÁO TRỘN
+   ========================================================= */
+
+function shuffle(array) {
+
+    const arr = [...array];
+
+    for (
+        let i = arr.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [
+            arr[i],
+            arr[j]
+        ] =
+        [
+            arr[j],
+            arr[i]
+        ];
+
+    }
+
+    return arr;
+
+}
+
+
+/* =========================================================
+   RANDOM CÂU HỎI
+   ========================================================= */
+
+function getRandomQuestions(pool) {
+
+    const unused =
+        pool.filter(
+            q =>
+                !playedQuestionKeys.has(
+                    getQuestionKey(q)
+                )
+        );
+
+    let source =
+        unused.length >= QUESTIONS_PER_TOPIC
+            ? unused
+            : pool;
+
+    return shuffle(source)
+        .slice(
+            0,
+            QUESTIONS_PER_TOPIC
+        );
+
 }
 
 
@@ -2359,7 +2334,12 @@ function getQuestionKey(q) {
 
 function renderTopicButtons() {
 
-    topicGrid.innerHTML = "";
+    const grid =
+        document.getElementById(
+            "topicGrid"
+        );
+
+    grid.innerHTML = "";
 
 
     getAllTopics().forEach(
@@ -2369,11 +2349,6 @@ function renderTopicButtons() {
                 document.createElement(
                     "button"
                 );
-
-
-            button.type =
-                "button";
-
 
             button.className =
                 "topic-button";
@@ -2385,87 +2360,46 @@ function renderTopicButtons() {
                 );
 
 
-            if (isCompleted) {
-
-                button.classList.add(
-                    "completed"
-                );
-
-                button.disabled =
-                    true;
-            }
+            button.disabled =
+                isCompleted;
 
 
-            const title =
-                document.createElement(
-                    "div"
-                );
+            button.innerHTML = `
+
+                <div class="topic-icon">
+                    ${topicIcons[topic]}
+                </div>
+
+                <div class="topic-title">
+                    ${topic}
+                </div>
+
+                <div class="topic-desc">
+                    ${topicDescriptions[topic]}
+                </div>
+
+                ${
+                    isCompleted
+                        ? `<div style="margin-top:8px;font-weight:bold;">
+                            ✅ ĐÃ HOÀN THÀNH
+                           </div>`
+                        : ""
+                }
+
+            `;
 
 
-            title.className =
-                "topic-button-title";
-
-
-            title.textContent =
-                topicIcons[topic]
-                + " "
-                + topic;
-
-
-            const desc =
-                document.createElement(
-                    "div"
-                );
-
-
-            desc.className =
-                "topic-button-desc";
-
-
-            if (isCompleted) {
-
-                desc.textContent =
-                    "✅ Đã hoàn thành";
-
-            } else {
-
-                desc.textContent =
-                    topicDescriptions[
-                        topic
-                    ];
-            }
-
-
-            button.appendChild(
-                title
+            button.addEventListener(
+                "click",
+                () => startTopic(topic)
             );
 
 
-            button.appendChild(
-                desc
-            );
+            grid.appendChild(button);
 
-
-            if (!isCompleted) {
-
-                button.addEventListener(
-                    "click",
-                    () => {
-
-                        startTopic(
-                            topic
-                        );
-
-                    }
-                );
-            }
-
-
-            topicGrid.appendChild(
-                button
-            );
         }
     );
+
 }
 
 
@@ -2478,92 +2412,67 @@ function updateStats() {
     document.getElementById(
         "topicName"
     ).textContent =
-        activeTopic || "Chưa chọn";
+        activeTopic || "-";
 
 
-    totalCorrectElement.textContent =
+    document.getElementById(
+        "score"
+    ).textContent =
+        score;
+
+
+    document.getElementById(
+        "totalCorrect"
+    ).textContent =
         totalCorrect;
 
 
-    topicProgressElement.textContent =
+    document.getElementById(
+        "topicProgress"
+    ).textContent =
         activeTopic
-            ? completedQuestions
-              + " / "
-              + QUESTIONS_PER_TOPIC
-            : "0 / 20";
-
-
-    progressText.textContent =
-        activeTopic
-            ? completedQuestions
-              + " / "
-              + QUESTIONS_PER_TOPIC
-              + " câu đã chơi"
-            : "Hãy chọn một chủ đề để bắt đầu";
-
-
-    const percentage =
-        activeTopic
-            ? (
-                completedQuestions
-                /
+            ? `${Math.min(
+                topicIndex,
                 QUESTIONS_PER_TOPIC
-                *
+              )}/${QUESTIONS_PER_TOPIC}`
+            : "-";
+
+
+    const progress =
+        activeTopic
+            ? Math.min(
+                topicIndex /
+                QUESTIONS_PER_TOPIC *
+                100,
                 100
-              )
+            )
             : 0;
 
 
-    progressBar.style.width =
-        percentage + "%";
-
-
-    if (activeTopic) {
-
-        const displayQuestion =
-            Math.min(
-                completedQuestions + 1,
+    document.getElementById(
+        "progressText"
+    ).textContent =
+        activeTopic
+            ? `${Math.min(
+                topicIndex,
                 QUESTIONS_PER_TOPIC
-            );
+              )} / ${QUESTIONS_PER_TOPIC}`
+            : "0 / 20";
 
 
-        info.textContent =
-            "Chủ đề: "
-            + activeTopic
-            + " • Câu "
-            + displayQuestion
-            + " / "
-            + QUESTIONS_PER_TOPIC;
-
-    } else {
-
-        info.textContent =
-            "Hãy chọn chủ đề để bắt đầu";
-    }
-}
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        progress + "%";
 
 
-/* =========================================================
-   RANDOM CÂU HỎI KHÔNG TRÙNG
-   ========================================================= */
+    document.getElementById(
+        "info"
+    ).textContent =
+        activeTopic
+            ? `Chủ đề: ${activeTopic}`
+            : "";
 
-function getRandomQuestions(pool) {
-
-    const available =
-        pool.filter(
-            q =>
-                !playedQuestionKeys.has(
-                    getQuestionKey(q)
-                )
-        );
-
-
-    return shuffleArray(
-        available
-    ).slice(
-        0,
-        QUESTIONS_PER_TOPIC
-    );
 }
 
 
@@ -2587,51 +2496,23 @@ function startTopic(topic) {
     ) {
 
         alert(
-            "⚠️ Chủ đề "
-            + topic
-            + " chỉ có "
-            + pool.length
-            + " câu."
+            `Chủ đề "${topic}" chỉ có ${pool.length} câu. Cần ít nhất 20 câu.`
         );
 
         return;
+
     }
 
 
-    activeTopic =
-        topic;
-
+    activeTopic = topic;
 
     topicQuestions =
-        getRandomQuestions(
-            pool
-        );
-
-
-    if (
-        topicQuestions.length <
-        QUESTIONS_PER_TOPIC
-    ) {
-
-        topicQuestions =
-            shuffleArray(
-                pool
-            ).slice(
-                0,
-                QUESTIONS_PER_TOPIC
-            );
-    }
+        getRandomQuestions(pool);
 
 
     topicIndex = 0;
 
     completedQuestions = 0;
-
-    totalCorrect = 0;
-
-    currentRow = 0;
-
-    gameOver = false;
 
     topicHasWrongAnswer = false;
 
@@ -2641,39 +2522,33 @@ function startTopic(topic) {
 
     allTopicsFinished = false;
 
-
-    topicScreen.classList.add(
-        "hidden"
-    );
+    gameOver = false;
 
 
-    gameArea.classList.remove(
-        "hidden"
-    );
+    document.getElementById(
+        "topicScreen"
+    ).style.display = "none";
 
 
-    giftMessage.classList.add(
-        "hidden"
-    );
+    document.getElementById(
+        "gameArea"
+    ).style.display = "block";
 
 
-    levelUp.style.display =
-        "none";
+    document.getElementById(
+        "levelUp"
+    ).style.display = "none";
 
 
-    topicHeading.textContent =
-        topicIcons[topic]
-        + " CHỦ ĐỀ: "
-        + topic.toUpperCase();
-
-
-    topicDescriptionElement.textContent =
-        topicDescriptions[topic];
+    document.getElementById(
+        "giftMessage"
+    ).style.display = "none";
 
 
     updateStats();
 
     loadQuestion();
+
 }
 
 
@@ -2683,81 +2558,18 @@ function startTopic(topic) {
 
 function createBoard() {
 
+    const board =
+        document.getElementById(
+            "board"
+        );
+
     board.innerHTML = "";
 
 
-    const wordLength =
+    const answerLength =
         normalizeWord(
             currentQuestion.answer
         ).length;
-
-
-    const availableWidth =
-        Math.max(
-            250,
-            Math.min(
-                board.parentElement
-                    ? board.parentElement.clientWidth
-                    : 600,
-                600
-            )
-        );
-
-
-    let gap = 5;
-
-
-    if (
-        wordLength >= 16
-    ) {
-
-        gap = 2;
-
-    } else if (
-        wordLength >= 12
-    ) {
-
-        gap = 3;
-    }
-
-
-    let cellSize =
-        Math.floor(
-            (
-                availableWidth
-                -
-                gap *
-                (wordLength - 1)
-            )
-            /
-            wordLength
-        );
-
-
-    cellSize =
-        Math.min(
-            cellSize,
-            80
-        );
-
-
-    cellSize =
-        Math.max(
-            cellSize,
-            20
-        );
-
-
-    const fontSize =
-        Math.max(
-            10,
-            Math.min(
-                30,
-                Math.floor(
-                    cellSize * .40
-                )
-            )
-        );
 
 
     for (
@@ -2771,18 +2583,13 @@ function createBoard() {
                 "div"
             );
 
-
         row.className =
-            "row";
-
-
-        row.style.gap =
-            gap + "px";
+            "board-row";
 
 
         for (
             let c = 0;
-            c < wordLength;
+            c < answerLength;
             c++
         ) {
 
@@ -2791,61 +2598,37 @@ function createBoard() {
                     "div"
                 );
 
-
             cell.className =
                 "cell";
 
 
-            cell.style.width =
-                cellSize + "px";
+            row.appendChild(cell);
 
-
-            cell.style.height =
-                cellSize + "px";
-
-
-            cell.style.flex =
-                "0 0 "
-                + cellSize
-                + "px";
-
-
-            cell.style.fontSize =
-                fontSize + "px";
-
-
-            row.appendChild(
-                cell
-            );
         }
 
 
-        board.appendChild(
-            row
-        );
+        board.appendChild(row);
+
     }
+
 }
 
 
 /* =========================================================
-   LOAD CÂU HỎI
+   LOAD QUESTION
    ========================================================= */
 
 function loadQuestion() {
 
-    if (!activeTopic) {
-        return;
-    }
-
-
     if (
-        completedQuestions >=
+        topicIndex >=
         QUESTIONS_PER_TOPIC
     ) {
 
         checkTopicResult();
 
         return;
+
     }
 
 
@@ -2853,14 +2636,6 @@ function loadQuestion() {
         topicQuestions[
             topicIndex
         ];
-
-
-    if (!currentQuestion) {
-
-        checkTopicResult();
-
-        return;
-    }
 
 
     playedQuestionKeys.add(
@@ -2874,71 +2649,304 @@ function loadQuestion() {
 
     gameOver = false;
 
+    revealedPositions =
+        new Set();
 
-    levelUp.style.display =
-        "none";
 
-
-    questionBox.textContent =
+    document.getElementById(
+        "questionMessage"
+    ).textContent =
         currentQuestion.question;
 
 
-    questionMessage.textContent =
-        "";
+    const answerLength =
+        normalizeWord(
+            currentQuestion.answer
+        ).length;
 
 
-    /* =====================================================
-       ẨN GIẢI THÍCH CỦA CÂU TRƯỚC
-       ===================================================== */
+    const answerLengthDisplay =
+        document.getElementById("answerLength");
 
-    explanationBox.classList.add(
-        "hidden"
-    );
+    answerLengthDisplay.textContent =
+        `💡 Đáp án có ${answerLength} ký tự`;
 
-    explanationText.textContent =
+    answerLengthDisplay.style.display = "block";
+    answerLengthDisplay.style.visibility = "visible";
+
+
+    document.getElementById(
+        "explanationBox"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "explanationText"
+    ).textContent =
         "";
 
 
     document.getElementById(
-        "answerLength"
+        "hintBox"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "guessInput"
+    ).value = "";
+
+
+    document.getElementById(
+        "guessInput"
+    ).disabled = false;
+
+
+    document.getElementById(
+        "guessButton"
+    ).disabled = false;
+
+
+    document.getElementById(
+        "hintButton"
+    ).disabled = false;
+
+
+    document.getElementById(
+        "continueButton"
+    ).disabled = true;
+
+
+    document.getElementById(
+        "continueButton"
     ).textContent =
-        "💡 Đáp án có "
-        + normalizeWord(
-            currentQuestion.answer
-        ).length
-        + " ký tự";
+        "▶ TIẾP TỤC";
 
 
-    input.value =
-        "";
-
-
-    input.disabled =
-        false;
-
-
-    guessButton.disabled =
-        false;
-
-
-    continueButton.disabled =
-        true;
-
-
-    continueButton.textContent =
-        "▶ CÂU TIẾP";
+    document.getElementById(
+        "info"
+    ).textContent =
+        `Câu ${topicIndex + 1}/${QUESTIONS_PER_TOPIC}`;
 
 
     createBoard();
 
+    updateHintDisplay();
+
     updateStats();
 
-    input.focus();
+
+    setTimeout(
+        () =>
+            document
+                .getElementById(
+                    "guessInput"
+                )
+                .focus(),
+        50
+    );
+
 }
 
 
 /* =========================================================
-   EVALUATE GUESS
+   GỢI Ý
+   ========================================================= */
+
+function updateHintDisplay() {
+
+    if (!currentQuestion)
+        return;
+
+
+    const answer =
+        normalizeWord(
+            currentQuestion.answer
+        );
+
+
+    let display = "";
+
+
+    for (
+        let i = 0;
+        i < answer.length;
+        i++
+    ) {
+
+        if (
+            revealedPositions.has(i)
+        ) {
+
+            display +=
+                answer[i] + " ";
+
+        } else {
+
+            display +=
+                "_ ";
+
+        }
+
+    }
+
+
+    document.getElementById(
+        "hintText"
+    ).textContent =
+        "💡 " +
+        display.trim();
+
+
+    if (
+        revealedPositions.size >=
+        answer.length
+    ) {
+
+        document.getElementById(
+            "hintButton"
+        ).disabled = true;
+
+    }
+
+}
+
+
+/* =========================================================
+   DÙNG GỢI Ý
+   ========================================================= */
+
+function useHint() {
+
+    if (
+        !currentQuestion ||
+        gameOver
+    )
+        return;
+
+
+    const answer =
+        normalizeWord(
+            currentQuestion.answer
+        );
+
+
+    const remaining = [];
+
+
+    for (
+        let i = 0;
+        i < answer.length;
+        i++
+    ) {
+
+        if (
+            !revealedPositions.has(i)
+        ) {
+
+            remaining.push(i);
+
+        }
+
+    }
+
+
+    if (
+        remaining.length === 0
+    )
+        return;
+
+
+    const maxHints =
+        Math.min(
+            remaining.length,
+            Math.floor(
+                score / 100
+            )
+        );
+
+
+    if (maxHints <= 0) {
+
+        alert(
+            "Bạn không đủ điểm để sử dụng gợi ý!"
+        );
+
+        return;
+
+    }
+
+
+    let amount =
+        prompt(
+            `Bạn muốn mở bao nhiêu chữ?\n\nTối đa: ${maxHints} chữ\nMỗi chữ: -100 điểm`
+        );
+
+
+    if (
+        amount === null
+    )
+        return;
+
+
+    amount =
+        Number(amount);
+
+
+    if (
+        !Number.isInteger(amount) ||
+        amount < 1 ||
+        amount > maxHints
+    ) {
+
+        alert(
+            `Vui lòng nhập số từ 1 đến ${maxHints}.`
+        );
+
+        return;
+
+    }
+
+
+    const shuffled =
+        shuffle(
+            remaining
+        );
+
+
+    for (
+        let i = 0;
+        i < amount;
+        i++
+    ) {
+
+        revealedPositions.add(
+            shuffled[i]
+        );
+
+    }
+
+
+    score -=
+        amount * 100;
+
+
+    localStorage.setItem(
+        SCORE_STORAGE_KEY,
+        score
+    );
+
+
+    updateHintDisplay();
+
+    updateStats();
+
+}
+
+
+/* =========================================================
+   ĐÁNH GIÁ WORDLE
    ========================================================= */
 
 function evaluateGuess(
@@ -2954,12 +2962,8 @@ function evaluateGuess(
         );
 
 
-    const answerChars =
-        answer.split("");
-
-
-    const guessChars =
-        guess.split("");
+    const remaining =
+        {};
 
 
     for (
@@ -2969,82 +2973,26 @@ function evaluateGuess(
     ) {
 
         if (
-            guessChars[i]
-            === answerChars[i]
+            guess[i] === answer[i]
         ) {
 
             result[i] =
                 "correct";
 
-            answerChars[i] =
-                null;
+        } else {
 
-            guessChars[i] =
-                null;
-        }
-    }
+            remaining[
+                answer[i]
+            ] =
+                (
+                    remaining[
+                        answer[i]
+                    ] || 0
+                ) + 1;
 
-
-    for (
-        let i = 0;
-        i < answer.length;
-        i++
-    ) {
-
-        if (
-            guessChars[i]
-            === null
-        ) {
-
-            continue;
         }
 
-
-        const index =
-            answerChars.indexOf(
-                guessChars[i]
-            );
-
-
-        if (
-            index !== -1
-        ) {
-
-            result[i] =
-                "present";
-
-            answerChars[index] =
-                null;
-        }
     }
-
-
-    return result;
-}
-
-
-/* =========================================================
-   HIỂN THỊ ĐÁP ÁN
-   ========================================================= */
-
-function showGuess(
-    guess,
-    result
-) {
-
-    const row =
-        board.children[
-            currentRow
-        ];
-
-
-    if (!row) {
-        return;
-    }
-
-
-    const cells =
-        row.children;
 
 
     for (
@@ -3053,37 +3001,95 @@ function showGuess(
         i++
     ) {
 
-        if (!cells[i]) {
+        if (
+            result[i] ===
+            "correct"
+        )
             continue;
+
+
+        if (
+            remaining[
+                guess[i]
+            ] > 0
+        ) {
+
+            result[i] =
+                "present";
+
+            remaining[
+                guess[i]
+            ]--;
+
         }
 
-
-        cells[i].textContent =
-            guess[i];
-
-
-        cells[i].classList.add(
-            result[i],
-            "pop"
-        );
     }
+
+
+    return result;
+
 }
 
 
 /* =========================================================
-   ĐOÁN
+   HIỂN THỊ ĐOÁN
+   ========================================================= */
+
+function showGuess(
+    guess,
+    result
+) {
+
+    const row =
+        document
+            .getElementById(
+                "board"
+            )
+            .children[
+                currentRow
+            ];
+
+
+    for (
+        let i = 0;
+        i < guess.length;
+        i++
+    ) {
+
+        row.children[
+            i
+        ].textContent =
+            guess[i];
+
+
+        row.children[
+            i
+        ].classList.add(
+            result[i]
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   ĐOÁN TỪ
    ========================================================= */
 
 function guessWord() {
 
     if (
-        gameOver
-        ||
+        gameOver ||
         !currentQuestion
-    ) {
-
+    )
         return;
-    }
+
+
+    const input =
+        document.getElementById(
+            "guessInput"
+        );
 
 
     const guess =
@@ -3100,12 +3106,12 @@ function guessWord() {
 
     if (!guess) {
 
-        questionMessage.textContent =
-            "⚠️ Bạn chưa nhập đáp án!";
-
-        input.focus();
+        alert(
+            "Vui lòng nhập đáp án!"
+        );
 
         return;
+
     }
 
 
@@ -3114,19 +3120,13 @@ function guessWord() {
         answer.length
     ) {
 
-        questionMessage.textContent =
-            "⚠️ Đáp án phải có "
-            + answer.length
-            + " ký tự!";
-
-        input.focus();
+        alert(
+            `Đáp án phải có ${answer.length} ký tự.`
+        );
 
         return;
+
     }
-
-
-    questionMessage.textContent =
-        "";
 
 
     const result =
@@ -3142,18 +3142,24 @@ function guessWord() {
     );
 
 
+    const isCorrect =
+        guess === answer;
+
+
     currentRow++;
 
 
-    /* =====================================================
-       ĐÚNG
-       ===================================================== */
-
-    if (
-        guess === answer
-    ) {
+    if (isCorrect) {
 
         gameOver = true;
+
+        // Trả lời đúng được cộng 50 điểm.
+        score += 50;
+
+        localStorage.setItem(
+            SCORE_STORAGE_KEY,
+            score
+        );
 
         totalCorrect++;
 
@@ -3162,70 +3168,71 @@ function guessWord() {
         topicIndex++;
 
 
-        questionMessage.innerHTML =
-            "🎉 CHÍNH XÁC!<br>"
-            + "Đáp án: "
-            + currentQuestion.answer;
+        document.getElementById(
+            "info"
+        ).textContent =
+            "🎉 CHÍNH XÁC!";
 
 
-        /* =================================================
-           HIỆN GIẢI THÍCH
-           ================================================= */
+        document.getElementById(
+            "explanationBox"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "explanationText"
+        ).textContent =
+            currentQuestion.explanation ||
+            "Không có giải thích.";
+
+
+        document.getElementById(
+            "guessInput"
+        ).disabled = true;
+
+
+        document.getElementById(
+            "guessButton"
+        ).disabled = true;
+
+
+        document.getElementById(
+            "hintButton"
+        ).disabled = true;
+
+
+        document.getElementById(
+            "continueButton"
+        ).disabled = false;
+
 
         if (
-            currentQuestion.explanation
-            &&
-            String(
-                currentQuestion.explanation
-            ).trim() !== ""
-        ) {
-
-            explanationText.textContent =
-                currentQuestion.explanation;
-
-        } else {
-
-            explanationText.textContent =
-                "Chưa có phần giải thích cho câu này.";
-        }
-
-
-        explanationBox.classList.remove(
-            "hidden"
-        );
-
-
-        input.disabled = true;
-
-        guessButton.disabled = true;
-
-        continueButton.disabled = false;
-
-
-        if (
-            completedQuestions >=
+            topicIndex >=
             QUESTIONS_PER_TOPIC
         ) {
 
-            continueButton.textContent =
+            document.getElementById(
+                "continueButton"
+            ).textContent =
                 "🏆 HOÀN THÀNH CHỦ ĐỀ";
 
         } else {
 
-            continueButton.textContent =
+            document.getElementById(
+                "continueButton"
+            ).textContent =
                 "▶ CÂU TIẾP";
+
         }
 
 
         updateStats();
 
         return;
+
     }
 
-
-    /* =====================================================
-       HẾT 6 LƯỢT
-       ===================================================== */
 
     if (
         currentRow >=
@@ -3241,41 +3248,56 @@ function guessWord() {
         topicIndex++;
 
 
-        questionMessage.innerHTML =
-            "😢 HẾT LƯỢT!<br>"
-            + "Đáp án đúng là: "
-            + currentQuestion.answer
-            + "<br><br>"
-            + "⚠️ Câu này bị sai."
-            + "<br>"
-            + "Bạn vẫn được chơi tiếp đến câu 20.";
+        document.getElementById(
+            "info"
+        ).textContent =
+            `❌ Hết lượt! Đáp án đúng: ${currentQuestion.answer}`;
 
 
-        input.disabled = true;
+        document.getElementById(
+            "guessInput"
+        ).disabled = true;
 
-        guessButton.disabled = true;
 
-        continueButton.disabled = false;
+        document.getElementById(
+            "guessButton"
+        ).disabled = true;
+
+
+        document.getElementById(
+            "hintButton"
+        ).disabled = true;
+
+
+        document.getElementById(
+            "continueButton"
+        ).disabled = false;
 
 
         if (
-            completedQuestions >=
+            topicIndex >=
             QUESTIONS_PER_TOPIC
         ) {
 
-            continueButton.textContent =
+            document.getElementById(
+                "continueButton"
+            ).textContent =
                 "🔄 XEM KẾT QUẢ";
 
         } else {
 
-            continueButton.textContent =
+            document.getElementById(
+                "continueButton"
+            ).textContent =
                 "▶ CÂU TIẾP";
+
         }
 
 
         updateStats();
 
         return;
+
     }
 
 
@@ -3283,7 +3305,6 @@ function guessWord() {
 
     input.focus();
 
-    updateStats();
 }
 
 
@@ -3296,24 +3317,24 @@ function checkTopicResult() {
     if (
         completedQuestions ===
         QUESTIONS_PER_TOPIC
-
-        &&
-
-        totalCorrect ===
-        QUESTIONS_PER_TOPIC
-
-        &&
-
-        topicHasWrongAnswer ===
-        false
     ) {
 
-        finishTopic();
+        if (
+            totalCorrect ===
+            QUESTIONS_PER_TOPIC &&
+            !topicHasWrongAnswer
+        ) {
 
-    } else {
+            finishTopic();
 
-        showRetryTopic();
+        } else {
+
+            showRetryTopic();
+
+        }
+
     }
+
 }
 
 
@@ -3323,115 +3344,103 @@ function checkTopicResult() {
 
 function finishTopic() {
 
-    /* ẨN GIẢI THÍCH CŨ */
-
-    explanationBox.classList.add(
-        "hidden"
-    );
-
-    explanationText.textContent =
-        "";
-
-
-    const finishedTopic =
-        activeTopic;
-
-
     if (
         !completedTopics.includes(
-            finishedTopic
+            activeTopic
         )
     ) {
 
         completedTopics.push(
-            finishedTopic
+            activeTopic
         );
+
     }
 
 
-    topicFinishScreen =
-        true;
+    topicFinishScreen = true;
+
+    gameOver = true;
 
 
-    gameOver =
-        true;
+    const allFinished =
+        completedTopics.length ===
+        getAllTopics().length;
 
 
-    const allTopics =
-        getAllTopics();
-
-
-    const allCompleted =
-        allTopics.every(
-            topic =>
-                completedTopics.includes(
-                    topic
-                )
-        );
-
-
-    levelUp.style.display =
+    document.getElementById(
+        "levelUp"
+    ).style.display =
         "block";
 
 
-    levelUp.textContent =
-        "🎉 "
-        + finishedTopic.toUpperCase()
-        + " ĐÃ HOÀN THÀNH! 🎉";
+    document.getElementById(
+        "levelUpText"
+    ).textContent =
+        allFinished
+            ? "🎉 Bạn đã hoàn thành tất cả chủ đề!"
+            : `Bạn đã hoàn thành chủ đề ${activeTopic}!`;
 
 
-    questionBox.textContent =
+    document.getElementById(
+        "questionMessage"
+    ).textContent =
         "🏆 QUÁ GIỎI!";
 
 
-    questionMessage.innerHTML =
-        "Bạn đã hoàn thành "
-        + finishedTopic
-        + " với "
-        + QUESTIONS_PER_TOPIC
-        + " / "
-        + QUESTIONS_PER_TOPIC
-        + " câu đúng!";
-
-
-    board.innerHTML =
+    document.getElementById(
+        "answerLength"
+    ).textContent =
         "";
 
 
-    input.value =
+    document.getElementById(
+        "explanationBox"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "board"
+    ).innerHTML =
         "";
 
-    input.disabled =
-        true;
 
-    guessButton.disabled =
-        true;
-
-
-    if (!allCompleted) {
-
-        continueButton.disabled =
-            false;
-
-        continueButton.textContent =
-            "▶ CHỌN CHỦ ĐỀ TIẾP THEO";
+    document.getElementById(
+        "guessInput"
+    ).disabled = true;
 
 
-        progressText.textContent =
-            "🎉 Hoàn thành chủ đề!";
+    document.getElementById(
+        "guessButton"
+    ).disabled = true;
 
 
-        progressBar.style.width =
-            "100%";
+    document.getElementById(
+        "hintButton"
+    ).disabled = true;
 
 
-        info.textContent =
-            "Bấm CHỌN CHỦ ĐỀ TIẾP THEO để tiếp tục.";
+    document.getElementById(
+        "continueButton"
+    ).disabled = false;
+
+
+    if (allFinished) {
+
+        finishAllTopics();
 
     } else {
 
-        finishAllTopics();
+        document.getElementById(
+            "continueButton"
+        ).textContent =
+            "▶ CHỌN CHỦ ĐỀ TIẾP THEO";
+
     }
+
+
+    updateStats();
+
 }
 
 
@@ -3441,384 +3450,307 @@ function finishTopic() {
 
 function finishAllTopics() {
 
-    allTopicsFinished =
-        true;
+    allTopicsFinished = true;
 
 
-    topicFinishScreen =
-        false;
-
-
-    gameOver =
-        true;
-
-
-    explanationBox.classList.add(
-        "hidden"
-    );
-
-    explanationText.textContent =
-        "";
-
-
-    gameArea.classList.add(
-        "hidden"
-    );
-
-
-    topicScreen.classList.remove(
-        "hidden"
-    );
-
-
-    topicHeading.textContent =
-        "🎊 CHÚC MỪNG BẠN! 🎊";
-
-
-    topicDescriptionElement.textContent =
-        "🌸 Bạn đã chinh phục toàn bộ chủ đề! 🌸";
-
-
-    topicGrid.innerHTML =
-        "";
-
-
-    giftMessage.classList.remove(
-        "hidden"
-    );
-
-
-    giftMessage.innerHTML =
-        "🎁 BẠN ĐÃ HOÀN THÀNH TẤT CẢ! 🎁<br><br>"
-        + "Liên hệ Tuân Võ để nhận quà nhé! 😘";
-
-
-    levelUp.style.display =
+    document.getElementById(
+        "gameArea"
+    ).style.display =
         "none";
 
 
-    progressText.textContent =
-        "🎉 BẠN ĐÃ HOÀN THÀNH TOÀN BỘ TRÒ CHƠI!";
+    document.getElementById(
+        "topicScreen"
+    ).style.display =
+        "block";
 
 
-    progressBar.style.width =
+    document.getElementById(
+        "topicHeading"
+    ).textContent =
+        "🎉 CHÚC MỪNG!";
+
+
+    document.getElementById(
+        "topicDescription"
+    ).textContent =
+        "Bạn đã hoàn thành toàn bộ Mini Game!";
+
+
+    document.getElementById(
+        "topicGrid"
+    ).innerHTML =
+        "";
+
+
+    document.getElementById(
+        "giftMessage"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "progressText"
+    ).textContent =
         "100%";
 
 
-    topicProgressElement.textContent =
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        "100%";
+
+
+    document.getElementById(
+        "topicProgress"
+    ).textContent =
         "HOÀN TẤT";
 
 
-    totalCorrectElement.textContent =
+    document.getElementById(
+        "totalCorrect"
+    ).textContent =
         "🎉";
 
-
-    info.textContent =
-        "Bạn đã hoàn thành "
-        + completedTopics.length
-        + " / "
-        + getAllTopics().length
-        + " chủ đề";
 }
 
 
 /* =========================================================
-   THẤT BẠI CHỦ ĐỀ
+   CHƯA HOÀN THÀNH CHỦ ĐỀ
    ========================================================= */
 
 function showRetryTopic() {
 
-    retryScreen =
-        true;
+    retryScreen = true;
+
+    gameOver = true;
 
 
-    gameOver =
-        true;
-
-
-    /* ẨN GIẢI THÍCH */
-
-    explanationBox.classList.add(
-        "hidden"
-    );
-
-    explanationText.textContent =
-        "";
-
-
-    questionBox.textContent =
-        "😢 CHỦ ĐỀ CHƯA HOÀN THÀNH";
-
-
-    questionMessage.innerHTML =
-        "Bạn đạt "
-        + totalCorrect
-        + " / "
-        + QUESTIONS_PER_TOPIC
-        + " câu đúng.<br><br>"
-        + "⚠️ Bạn đã sai ít nhất 1 câu nên "
-        + "chủ đề này KHÔNG được tính hoàn thành."
-        + "<br><br>"
-        + "🔄 Hãy chơi lại chủ đề này.";
-
-
-    board.innerHTML =
-        "";
-
-
-    input.value =
-        "";
-
-    input.disabled =
-        true;
-
-
-    guessButton.disabled =
-        true;
-
-
-    continueButton.disabled =
-        false;
-
-
-    continueButton.textContent =
-        "🔄 CHƠI LẠI CHỦ ĐỀ";
-
-
-    levelUp.style.display =
+    document.getElementById(
+        "levelUp"
+    ).style.display =
         "block";
 
 
-    levelUp.textContent =
-        "💗 CỐ GẮNG LẠI NHÉ! 💗";
+    document.getElementById(
+        "levelUpText"
+    ).textContent =
+        `Bạn đúng ${totalCorrect}/${QUESTIONS_PER_TOPIC} câu.`;
 
 
-    progressText.textContent =
-        "Kết quả: "
-        + totalCorrect
-        + " / "
-        + QUESTIONS_PER_TOPIC
-        + " câu đúng — CHƯA HOÀN THÀNH";
+    document.getElementById(
+        "questionMessage"
+    ).textContent =
+        "❌ CHỦ ĐỀ CHƯA HOÀN THÀNH";
 
 
-    progressBar.style.width =
-        (
-            totalCorrect
-            /
-            QUESTIONS_PER_TOPIC
-            *
-            100
-        )
-        + "%";
+    document.getElementById(
+        "answerLength"
+    ).textContent =
+        "Bạn cần đúng cả 20 câu để hoàn thành chủ đề.";
+
+
+    document.getElementById(
+        "explanationBox"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "board"
+    ).innerHTML =
+        "";
+
+
+    document.getElementById(
+        "guessInput"
+    ).disabled = true;
+
+
+    document.getElementById(
+        "guessButton"
+    ).disabled = true;
+
+
+    document.getElementById(
+        "hintButton"
+    ).disabled = true;
+
+
+    document.getElementById(
+        "continueButton"
+    ).disabled = false;
+
+
+    document.getElementById(
+        "continueButton"
+    ).textContent =
+        "🔄 CHƠI LẠI CHỦ ĐỀ";
+
+
+    updateStats();
+
 }
 
 
 /* =========================================================
-   NÚT CÂU TIẾP
-   ========================================================= */
-
-continueButton.addEventListener(
-    "click",
-    () => {
-
-        if (!gameOver) {
-            return;
-        }
-
-
-        /* ================================================
-           THẤT BẠI → CHƠI LẠI CHỦ ĐỀ
-           ================================================ */
-
-        if (retryScreen) {
-
-            retryScreen = false;
-
-            topicFinishScreen = false;
-
-            topicIndex = 0;
-
-            completedQuestions = 0;
-
-            totalCorrect = 0;
-
-            topicHasWrongAnswer = false;
-
-            currentRow = 0;
-
-            gameOver = false;
-
-
-            explanationBox.classList.add(
-                "hidden"
-            );
-
-            explanationText.textContent =
-                "";
-
-
-            const pool =
-                questions.filter(
-                    q =>
-                        getTopicForQuestion(q)
-                        === activeTopic
-                );
-
-
-            topicQuestions =
-                shuffleArray(
-                    pool
-                ).slice(
-                    0,
-                    QUESTIONS_PER_TOPIC
-                );
-
-
-            levelUp.style.display =
-                "none";
-
-
-            gameArea.classList.remove(
-                "hidden"
-            );
-
-
-            topicScreen.classList.add(
-                "hidden"
-            );
-
-
-            loadQuestion();
-
-            return;
-        }
-
-
-        /* ================================================
-           HOÀN THÀNH CHỦ ĐỀ
-           → QUAY LẠI CHỌN CHỦ ĐỀ
-           ================================================ */
-
-        if (
-            topicFinishScreen
-        ) {
-
-            topicFinishScreen =
-                false;
-
-
-            showTopicSelection();
-
-            return;
-        }
-
-
-        /* ================================================
-           CÂU TIẾP
-           ================================================ */
-
-        if (
-            completedQuestions >=
-            QUESTIONS_PER_TOPIC
-        ) {
-
-            checkTopicResult();
-
-            return;
-        }
-
-
-        loadQuestion();
-    }
-);
-
-
-/* =========================================================
-   HIỆN MÀN HÌNH CHỌN CHỦ ĐỀ
+   HIỂN THỊ CHỌN CHỦ ĐỀ
    ========================================================= */
 
 function showTopicSelection() {
 
-    gameArea.classList.add(
-        "hidden"
-    );
+    retryScreen = false;
+
+    topicFinishScreen = false;
+
+    allTopicsFinished = false;
 
 
-    topicScreen.classList.remove(
-        "hidden"
-    );
-
-
-    levelUp.style.display =
+    document.getElementById(
+        "gameArea"
+    ).style.display =
         "none";
 
 
-    giftMessage.classList.add(
-        "hidden"
-    );
+    document.getElementById(
+        "topicScreen"
+    ).style.display =
+        "block";
 
 
-    topicHeading.textContent =
-        "🌸 CHỌN CHỦ ĐỀ TIẾP THEO 🌸";
+    document.getElementById(
+        "levelUp"
+    ).style.display =
+        "none";
 
 
-    topicDescriptionElement.textContent =
-        "🎯 Chủ đề đã hoàn thành sẽ không thể chọn lại trong vòng này.";
+    document.getElementById(
+        "topicHeading"
+    ).textContent =
+        "🎯 CHỌN CHỦ ĐỀ";
+
+
+    document.getElementById(
+        "topicDescription"
+    ).textContent =
+        "Chọn một chủ đề để tiếp tục.";
+
+
+    document.getElementById(
+        "giftMessage"
+    ).style.display =
+        "none";
 
 
     renderTopicButtons();
 
-
-    progressText.textContent =
-        "Chọn chủ đề tiếp theo";
-
-
-    progressBar.style.width =
-        "100%";
-
-
-    info.textContent =
-        "Bạn đã hoàn thành: "
-        + completedTopics.length
-        + " / "
-        + getAllTopics().length
-        + " chủ đề";
 }
 
 
 /* =========================================================
-   NÚT RESET TRONG GAME
+   NÚT TIẾP TỤC
    ========================================================= */
 
-resetButton.addEventListener(
-    "click",
-    startNewRound
-);
+document
+    .getElementById(
+        "continueButton"
+    )
+    .addEventListener(
+        "click",
+        function () {
+
+
+            if (retryScreen) {
+
+                const pool =
+                    questions.filter(
+                        q =>
+                            getTopicForQuestion(q)
+                            === activeTopic
+                    );
+
+
+                topicQuestions =
+                    shuffle(pool)
+                        .slice(
+                            0,
+                            QUESTIONS_PER_TOPIC
+                        );
+
+
+                topicIndex = 0;
+
+                completedQuestions = 0;
+
+                totalCorrect = 0;
+
+                topicHasWrongAnswer = false;
+
+                retryScreen = false;
+
+                gameOver = false;
+
+
+                document.getElementById(
+                    "levelUp"
+                ).style.display =
+                    "none";
+
+
+                document.getElementById(
+                    "gameArea"
+                ).style.display =
+                    "block";
+
+
+                loadQuestion();
+
+                return;
+
+            }
+
+
+            if (
+                topicFinishScreen
+            ) {
+
+                showTopicSelection();
+
+                return;
+
+            }
+
+
+            if (
+                completedQuestions >=
+                QUESTIONS_PER_TOPIC
+            ) {
+
+                checkTopicResult();
+
+                return;
+
+            }
+
+
+            loadQuestion();
+
+        }
+    );
 
 
 /* =========================================================
-   NÚT RESET Ở MÀN HÌNH CHỌN CHỦ ĐỀ
-   ========================================================= */
-
-restartTopicButton.addEventListener(
-    "click",
-    startNewRound
-);
-
-
-/* =========================================================
-   CHƠI LẠI TỪ ĐẦU
+   RESET
    ========================================================= */
 
 function startNewRound() {
 
     completedTopics = [];
 
-    playedQuestionKeys.clear();
+    playedQuestionKeys =
+        new Set();
 
     activeTopic = null;
-
-    currentQuestion = null;
 
     topicQuestions = [];
 
@@ -3828,10 +3760,6 @@ function startNewRound() {
 
     totalCorrect = 0;
 
-    currentRow = 0;
-
-    gameOver = false;
-
     topicHasWrongAnswer = false;
 
     retryScreen = false;
@@ -3840,164 +3768,234 @@ function startNewRound() {
 
     allTopicsFinished = false;
 
+    gameOver = false;
 
-    gameArea.classList.add(
-        "hidden"
+    currentQuestion = null;
+
+    currentRow = 0;
+
+    score = START_SCORE;
+
+
+    localStorage.setItem(
+        SCORE_STORAGE_KEY,
+        score
     );
-
-
-    topicScreen.classList.remove(
-        "hidden"
-    );
-
-
-    levelUp.style.display =
-        "none";
-
-
-    giftMessage.classList.add(
-        "hidden"
-    );
-
-
-    explanationBox.classList.add(
-        "hidden"
-    );
-
-    explanationText.textContent =
-        "";
-
-
-    topicHeading.textContent =
-        "🌸 CHỌN CHỦ ĐỀ BẠN MUỐN CHƠI 🌸";
-
-
-    topicDescriptionElement.textContent =
-        "🎯 Vòng chơi mới! Bạn hãy tự chọn một chủ đề.";
-
-
-    questionBox.textContent =
-        "Đang chờ chọn chủ đề...";
-
-
-    questionMessage.textContent =
-        "";
 
 
     document.getElementById(
-        "answerLength"
+        "gameArea"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "topicScreen"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "levelUp"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "giftMessage"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "topicHeading"
     ).textContent =
-        "";
+        "🎯 CHỌN CHỦ ĐỀ";
 
 
-    board.innerHTML =
-        "";
-
-
-    input.value =
-        "";
-
-
-    input.disabled =
-        true;
-
-
-    guessButton.disabled =
-        true;
-
-
-    continueButton.disabled =
-        true;
-
-
-    continueButton.textContent =
-        "▶ CÂU TIẾP";
-
-
-    topicProgressElement.textContent =
-        "0 / 20";
-
-
-    totalCorrectElement.textContent =
-        "0";
-
-
-    progressText.textContent =
-        "Hãy chọn một chủ đề để bắt đầu";
-
-
-    progressBar.style.width =
-        "0%";
-
-
-    info.textContent =
-        "Chọn chủ đề để bắt đầu";
+    document.getElementById(
+        "topicDescription"
+    ).textContent =
+        "Chọn một chủ đề để bắt đầu chơi.";
 
 
     renderTopicButtons();
+
+    updateStats();
+
 }
 
 
 /* =========================================================
-   XÓA MESSAGE KHI NHẬP
+   NÚT RESET
    ========================================================= */
 
-input.addEventListener(
-    "input",
-    () => {
+document
+    .getElementById(
+        "resetButton"
+    )
+    .addEventListener(
+        "click",
+        startNewRound
+    );
 
-        if (!gameOver) {
 
-            questionMessage.textContent =
-                "";
+document
+    .getElementById(
+        "restartTopicButton"
+    )
+    .addEventListener(
+        "click",
+        startNewRound
+    );
+
+
+/* =========================================================
+   NÚT GỢI Ý
+   ========================================================= */
+
+document
+    .getElementById(
+        "hintButton"
+    )
+    .addEventListener(
+        "click",
+        useHint
+    );
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+document
+    .getElementById(
+        "guessInput"
+    )
+    .addEventListener(
+        "input",
+        function () {
+
+            if (!gameOver) {
+
+                document.getElementById(
+                    "info"
+                ).textContent =
+                    `Câu ${topicIndex + 1}/${QUESTIONS_PER_TOPIC}`;
+
+            }
+
         }
-    }
-);
+    );
 
 
 /* =========================================================
-   NÚT ĐOÁN
+   ENTER
    ========================================================= */
 
-guessButton.addEventListener(
-    "click",
-    guessWord
-);
+document
+    .getElementById(
+        "guessInput"
+    )
+    .addEventListener(
+        "keydown",
+        function (event) {
 
+            if (
+                event.key ===
+                "Enter"
+            ) {
 
-/* =========================================================
-   ENTER = ĐOÁN
-   ========================================================= */
+                guessWord();
 
-input.addEventListener(
-    "keydown",
-    event => {
+            }
 
-        if (
-            event.key === "Enter"
-        ) {
-
-            event.preventDefault();
-
-            guessWord();
         }
-    }
-);
+    );
 
 
 /* =========================================================
-   KHỞI ĐỘNG GAME
+   GUESS BUTTON
+   ========================================================= */
+
+document
+    .getElementById(
+        "guessButton"
+    )
+    .addEventListener(
+        "click",
+        guessWord
+    );
+
+
+/* =========================================================
+   HƯỚNG DẪN
+   ========================================================= */
+
+const guideButton =
+    document.getElementById(
+        "guideButton"
+    );
+
+const guideContent =
+    document.getElementById(
+        "guideContent"
+    );
+
+
+if (
+    guideButton &&
+    guideContent
+) {
+
+    guideButton.addEventListener(
+        "click",
+        function () {
+
+            const isHidden =
+                guideContent
+                    .classList
+                    .contains(
+                        "hidden"
+                    );
+
+
+            guideContent
+                .classList
+                .toggle(
+                    "hidden"
+                );
+
+
+            guideButton.setAttribute(
+                "aria-expanded",
+                String(isHidden)
+            );
+
+
+            guideButton.innerHTML =
+                isHidden
+                    ? "📖 BẤM VÀO ĐỂ HƯỚNG DẪN CHƠI ▲"
+                    : "📖 BẤM VÀO ĐỂ HƯỚNG DẪN CHƠI ▼";
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   KHỞI TẠO GAME
    ========================================================= */
 
 function initializeGame() {
 
     completedTopics = [];
 
-    playedQuestionKeys.clear();
+    playedQuestionKeys =
+        new Set();
 
     activeTopic = null;
-
-    currentQuestion = null;
 
     topicQuestions = [];
 
@@ -4007,10 +4005,6 @@ function initializeGame() {
 
     totalCorrect = 0;
 
-    currentRow = 0;
-
-    gameOver = false;
-
     topicHasWrongAnswer = false;
 
     retryScreen = false;
@@ -4019,46 +4013,63 @@ function initializeGame() {
 
     allTopicsFinished = false;
 
-
-    gameArea.classList.add(
-        "hidden"
-    );
+    gameOver = false;
 
 
-    topicScreen.classList.remove(
-        "hidden"
-    );
+    document.getElementById(
+        "gameArea"
+    ).style.display =
+        "none";
 
 
-    explanationBox.classList.add(
-        "hidden"
-    );
-
-    explanationText.textContent =
-        "";
+    document.getElementById(
+        "topicScreen"
+    ).style.display =
+        "block";
 
 
-    input.disabled =
-        true;
+    document.getElementById(
+        "explanationBox"
+    ).style.display =
+        "none";
 
 
-    guessButton.disabled =
-        true;
+    document.getElementById(
+        "hintBox"
+    ).style.display =
+        "none";
 
 
-    continueButton.disabled =
-        true;
+    document.getElementById(
+        "guessInput"
+    ).disabled = true;
 
+
+    document.getElementById(
+        "guessButton"
+    ).disabled = true;
+
+
+    document.getElementById(
+        "continueButton"
+    ).disabled = true;
+
+
+    updateStats();
 
     renderTopicButtons();
 
-    updateStats();
 }
 
+
+/* =========================================================
+   CHẠY GAME
+   ========================================================= */
 
 initializeGame();
 
 </script>
 
 </body>
+
 </html>
