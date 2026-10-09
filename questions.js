@@ -86,7 +86,7 @@ const questions = [
 
 {level:1,question:"Bánh gì có tên bộ phận cơ thể\"đố mẹo\"?",answer:"Bánh tai Heo",explanation:"Bánh được gọi là 'tai heo' vì hình dáng các lớp bánh cuộn lại giống chiếc tai của con heo."},
 
-{level:1,question:"Áo xanh đứng giữa ruộng đồng,\nThân dài nhiều đốt, ruột trong ngọt ngào\nÉp ra ly nước lao xao\nNgày hè ai gặp cũng chào làm quen."?",answer:"Cây mía",explanation:"Mía là loại cây có thân chứa nhiều đường tự nhiên, thường được ép lấy nước uống hoặc dùng để sản xuất đường."},
+{level:1,question:"Áo xanh đứng giữa ruộng đồng,\nThân dài nhiều đốt, ruột trong ngọt ngào\nÉp ra ly nước lao xao\nNgày hè ai gặp cũng chào làm quen?",answer:"Cây mía",explanation:"Mía là loại cây có thân chứa nhiều đường tự nhiên, thường được ép lấy nước uống hoặc dùng để sản xuất đường."},
 
 {level:1,question:"Bánh gì vuông vức, gói lá xanh, bên trong có nếp, đậu và thịt?",answer:"Bánh chưng",explanation:"Vì bánh chưng có hình vuông, được gói bằng lá dong màu xanh, bên trong gồm gạo nếp, đậu xanh và thịt heo. Đây là những đặc điểm rất đặc trưng của bánh chưng nên chỉ cần nghe mô tả là có thể nhận ra ngay."},
 
@@ -100,7 +100,7 @@ const questions = [
 
 {level:1,question:"Thứ gì màu trắng, uống được, nhưng không phải nước và cũng không phải nước ngọt?",answer:"Sữa Bò",explanation:"Sữa bò là thức uống dinh dưỡng được lấy từ bò sữa, nổi tiếng với hàm lượng canxi cao."},
 
-{level:1,question:"Kẹo gì người bán vừa kéo vừa gõ nhạc?\"đố mẹo"\",answer:"Kẹo kéo",explanation:"Kẹo kéo được làm từ đường và mạch nha. Người bán thường vừa kéo kẹo thành những dải dài vừa gõ thanh kim loại tạo âm thanh vui tai để thu hút khách."}
+{level:1,question:"Kẹo gì người bán vừa kéo vừa gõ nhạc?\"đố mẹo\"",answer:"Kẹo kéo",explanation:"Kẹo kéo được làm từ đường và mạch nha. Người bán thường vừa kéo kẹo thành những dải dài vừa gõ thanh kim loại tạo âm thanh vui tai để thu hút khách."}
 
 
 /* =========================================================
@@ -127,7 +127,7 @@ const questions = [
 
 {level:2,question:"Ai là người chỉ huy trận Ngọc Hồi - Đống Đa đánh tan 29 vạn quân Thanh?",answer:"Nguyễn Huệ",explanation:"Nguyễn Huệ (Quang Trung) (1753–1792) là lãnh tụ phong trào Tây Sơn. Sau khi lên ngôi hoàng đế, ông lấy niên hiệu Quang Trung và nổi tiếng với chiến thắng Ngọc Hồi - Đống Đa năm 1789 đánh bại quân Thanh."},
 
-{level:2,question:"Vị vua nào cầu viện nhà Thanh rồi trở thành biểu tượng của việc rước voi về giày mả tổ?",answer:"Lê Chiêu Thống",explanation:""Lê Chiêu Thống (1765–1793) là vị vua cuối cùng của nhà Hậu Lê. Khi bị phong trào Tây Sơn đánh bại, ông đã sang cầu cứu nhà Thanh đưa quân sang Việt Nam. Sự kiện này dẫn đến cuộc xâm lược của quân Thanh và sau đó bị Nguyễn Huệ đánh bại trong chiến thắng Ngọc Hồi - Đống Đa năm 1789."},
+{level:2,question:"Vị vua nào cầu viện nhà Thanh rồi trở thành biểu tượng của việc rước voi về giày mả tổ?",answer:"Lê Chiêu Thống",explanation:"Lê Chiêu Thống (1765–1793) là vị vua cuối cùng của nhà Hậu Lê. Khi bị phong trào Tây Sơn đánh bại, ông đã sang cầu cứu nhà Thanh đưa quân sang Việt Nam. Sự kiện này dẫn đến cuộc xâm lược của quân Thanh và sau đó bị Nguyễn Huệ đánh bại trong chiến thắng Ngọc Hồi - Đống Đa năm 1789."},
 
 {level:2,question:"Ngoài thành phố Nagasaki của Nhật Bản đã bị Mỹ ném bom nguyên tử trong Chiến tranh thế giới thứ hai còn thành phố nào khác ?",answer:"Hiroshima",explanation:"Ngày 6/8/1945, Mỹ ném quả bom nguyên tử đầu tiên xuống Hiroshima. Ba ngày sau, ngày 9/8/1945, thành phố Nagasaki trở thành mục tiêu của quả bom thứ hai. Hai sự kiện này góp phần dẫn đến việc Nhật Bản đầu hàng, kết thúc Chiến tranh thế giới thứ hai."},
 
