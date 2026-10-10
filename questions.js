@@ -28,7 +28,15 @@ const questions = [
 
 {level:1,question:"Loại đường nào không được tinh luyện hoàn toàn và còn chứa mật mía?",answer:"Đường nâu",explanation:"🍯 Đáp án là đường nâu vì đường nâu không được tinh luyện hoàn toàn như đường trắng nên vẫn giữ lại một phần mật mía, tạo nên màu nâu đặc trưng và hương vị ngọt thơm nhẹ.\n✅ Tác dụng đường nâu thường được dùng trong làm bánh, pha đồ uống và nấu ăn để tăng màu sắc, mùi thơm cũng như tạo vị ngọt đậm đà hơn so với đường trắng."},
 
-{level:1,question:"Loại hạt thường bị nhầm là hạt nhưng thực chất là phần nhân của hạch quả?",answer:"Hạnh nhân",explanation:"🌰 Đáp án là hạnh nhân vì phần chúng ta ăn thực chất không phải là một hạt theo nghĩa thực vật học. Hạnh nhân là phần nhân nằm bên trong hạch quả của cây hạnh nhân. Khi lớp vỏ và phần thịt quả bên ngoài được loại bỏ, phần nhân bên trong sẽ được thu hoạch để làm thực phẩm.\n✅ Tác dụng Hạnh nhân giàu chất béo lành mạnh, protein, chất xơ, vitamin E và nhiều khoáng chất, tốt cho tim mạch và sức khỏe tổng thể"},
+
+{
+ level: 1,
+    question: "Loại hạt thường bị nhầm là hạt nhưng thực chất là phần nhân của hạch quả?",
+    answer: "Hạnh nhân",
+    explanation: `🌰 Đáp án là hạnh nhân vì phần chúng ta ăn thực chất không phải là một hạt theo nghĩa thực vật học. Hạnh nhân là phần nhân nằm bên trong hạch quả của cây hạnh nhân.
+Khi lớp vỏ và phần thịt quả bên ngoài được loại bỏ, phần nhân bên trong sẽ được thu hoạch để làm thực phẩm.
+✅ Tác dụng: Hạnh nhân giàu chất béo lành mạnh, protein, chất xơ, vitamin E và nhiều khoáng chất, tốt cho tim mạch và sức khỏe tổng thể.`
+},
 
 {level:1,question:"Thứ gì càng khô càng cay?",answer:"Ớt khô",explanation:"Ớt khô là ớt tươi được phơi hoặc sấy khô để bảo quản lâu hơn. Khi mất nước, vị cay của ớt trở nên đậm đà và dễ cảm nhận hơn, nên thường được dùng làm gia vị trong nhiều món ăn."},
 
