@@ -86,6 +86,7 @@ const questions = [
 
 {level:1,question:"Bánh gì có tên bộ phận cơ thể (đố mẹo)?",answer:"Bánh tai Heo",explanation:"Bánh được gọi là 'tai heo' vì hình dáng các lớp bánh cuộn lại giống chiếc tai của con heo."},
 
+
 {level:1,question:"Áo xanh đứng giữa ruộng đồng,\nThân dài nhiều đốt, ruột trong ngọt ngào\nÉp ra ly nước lao xao\nNgày hè ai gặp cũng chào làm quen?",answer:"Cây mía",explanation:"Mía là loại cây có thân chứa nhiều đường tự nhiên, thường được ép lấy nước uống hoặc dùng để sản xuất đường."},
 
 {level:1,question:"Bánh gì vuông vức, gói lá xanh, bên trong có nếp, đậu và thịt?",answer:"Bánh chưng",explanation:"Vì bánh chưng có hình vuông, được gói bằng lá dong màu xanh, bên trong gồm gạo nếp, đậu xanh và thịt heo. Đây là những đặc điểm rất đặc trưng của bánh chưng nên chỉ cần nghe mô tả là có thể nhận ra ngay."},
