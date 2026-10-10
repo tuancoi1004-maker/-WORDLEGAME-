@@ -32,7 +32,7 @@ const questions = [
 
 {level:1,question:"Thứ gì càng khô càng cay?",answer:"Ớt khô",explanation:"Ớt khô là ớt tươi được phơi hoặc sấy khô để bảo quản lâu hơn. Khi mất nước, vị cay của ớt trở nên đậm đà và dễ cảm nhận hơn, nên thường được dùng làm gia vị trong nhiều món ăn."},
 
-{level:1,question:"Loại quả tên có chữ chanh nhưng không phải chanh\"đố mẹo\"?",answer:"Chanh dây",explanation:"Chanh dây có nguồn gốc từ khu vực Nam Mỹ, đặc biệt là Brazil, Paraguay và miền Bắc Argentina. Hiện nay được trồng phổ biến ở Việt Nam, nhất là các tỉnh Tây Nguyên."},
+{level:1,question:"Loại quả tên có chữ chanh nhưng không phải chanh (đố mẹo)?",answer:"Chanh dây",explanation:"Chanh dây có nguồn gốc từ khu vực Nam Mỹ, đặc biệt là Brazil, Paraguay và miền Bắc Argentina. Hiện nay được trồng phổ biến ở Việt Nam, nhất là các tỉnh Tây Nguyên."},
 
 {level:1,question:"Loại mì Nhật Bản thường ăn với nước dùng nóng?",answer:"Ramen",explanation:"Ramen là món mì nổi tiếng của Nhật Bản, thường được ăn cùng nước dùng nóng hầm từ xương, thịt hoặc hải sản. Món ăn này cung cấp năng lượng và là một biểu tượng của ẩm thực Nhật."},
 
@@ -40,31 +40,31 @@ const questions = [
 
 {level:1,question:"Món ăn nào của Thổ Nhĩ Kỳ gồm thịt nướng cắt lát từ khối thịt lớn?",answer:"Kebab",explanation:"Kebab là món thịt nướng nổi tiếng của Thổ Nhĩ Kỳ và Trung Đông. Tên gọi 'kebab' có nguồn gốc từ tiếng Ba Tư và tiếng Ả Rập, mang ý nghĩa là thịt được nướng hoặc quay trên lửa. Món ăn thường được chế biến bằng cách xếp các lớp thịt thành khối lớn rồi quay chín và cắt lát mỏng để sử dụng."},
 
-{level:1,question:"Tôi có vỏ nhưng không phải trái cây, bên trong có nhân thịt và tôm \"đố mẹo\"?",answer:"Há cảo",explanation:"Há cảo là món dimsum nổi tiếng với lớp vỏ bột mỏng bọc bên ngoài phần nhân tôm, thịt hoặc hải sản. Tên gọi \"há cảo\" bắt nguồn từ tiếng Quảng Đông (Har Gow) Trung Quốc, chỉ loại bánh bao hấp có nhân tôm bên trong."},
+{level:1,question:"Tôi có vỏ nhưng không phải trái cây, bên trong có nhân thịt và tôm (đố mẹo)?",answer:"Há cảo",explanation:"Há cảo là món dimsum nổi tiếng với lớp vỏ bột mỏng bọc bên ngoài phần nhân tôm, thịt hoặc hải sản. Tên gọi \"há cảo\" bắt nguồn từ tiếng Quảng Đông (Har Gow) Trung Quốc, chỉ loại bánh bao hấp có nhân tôm bên trong."},
 
-{level:1,question:"Tôi là món ăn Hàn Quốc, càng để lâu càng chua?\"đố mẹo\"?",answer:"Kimchi",explanation:"Kimchi là món rau củ lên men truyền thống của Hàn Quốc. Nhờ quá trình lên men, kimchi chứa lợi khuẩn hỗ trợ tiêu hóa, đồng thời cung cấp chất xơ và một số vitamin. Tuy nhiên kimchi cũng chứa khá nhiều muối, nên ăn quá nhiều có thể làm tăng lượng natri nạp vào cơ thể."},
+{level:1,question:"Tôi là món ăn Hàn Quốc, càng để lâu càng chua? (đố mẹo)?",answer:"Kimchi",explanation:"Kimchi là món rau củ lên men truyền thống của Hàn Quốc. Nhờ quá trình lên men, kimchi chứa lợi khuẩn hỗ trợ tiêu hóa, đồng thời cung cấp chất xơ và một số vitamin. Tuy nhiên kimchi cũng chứa khá nhiều muối, nên ăn quá nhiều có thể làm tăng lượng natri nạp vào cơ thể."},
 
-{level:1,question:"Thứ gì trong bếp có thể chảy nhưng không phải chất lỏng \"đố mẹo\"?",answer:"Phô mai",explanation:"Phô mai là thực phẩm được làm từ sữa và trải qua quá trình đông tụ, ủ chín. Tên gọi 'phô mai' bắt nguồn từ tiếng Pháp \"fromage\". Khi gặp nhiệt độ cao, phô mai có thể tan chảy và kéo sợi nên thường được dùng trong pizza, mì Ý và nhiều món nướng.Có nguồn gốc từ các vùng chăn nuôi gia súc cổ đại ở châu Âu và Tây Á, sau đó phát triển mạnh ở Pháp, Ý, Thụy Sĩ và nhiều nước châu Âu"},
+{level:1,question:"Thứ gì trong bếp có thể chảy nhưng không phải chất lỏng (đố mẹo)?",answer:"Phô mai",explanation:"Phô mai là thực phẩm được làm từ sữa và trải qua quá trình đông tụ, ủ chín. Tên gọi 'phô mai' bắt nguồn từ tiếng Pháp \"fromage\". Khi gặp nhiệt độ cao, phô mai có thể tan chảy và kéo sợi nên thường được dùng trong pizza, mì Ý và nhiều món nướng.Có nguồn gốc từ các vùng chăn nuôi gia súc cổ đại ở châu Âu và Tây Á, sau đó phát triển mạnh ở Pháp, Ý, Thụy Sĩ và nhiều nước châu Âu"},
 
-{level:1,question:"Tôi không phải rau, không phải quả. Tôi được tạo ra từ đậu nành nhưng lại có thể thay thế thịt trong nhiều món ăn. Tôi là gì \"đố mẹo\"?",answer:"đậu hũ",explanation:"Đậu hũ (đậu phụ) là thực phẩm được làm từ sữa đậu nành đông tụ. Đây là nguồn protein thực vật phổ biến, thường được dùng để thay thế thịt trong các món ăn chay hoặc thực đơn ít chất béo. Tên gọi 'đậu hũ' có nguồn gốc từ tiếng Hoa (Trung Quốc)."},
+{level:1,question:"Tôi không phải rau, không phải quả. Tôi được tạo ra từ đậu nành nhưng lại có thể thay thế thịt trong nhiều món ăn. Tôi là gì (đố mẹo)?",answer:"đậu hũ",explanation:"Đậu hũ (đậu phụ) là thực phẩm được làm từ sữa đậu nành đông tụ. Đây là nguồn protein thực vật phổ biến, thường được dùng để thay thế thịt trong các món ăn chay hoặc thực đơn ít chất béo. Tên gọi 'đậu hũ' có nguồn gốc từ tiếng Hoa (Trung Quốc)."},
 
 {level:1,question:"Loại bánh của Mexico thường được gói nhân thịt?",answer:"Taco",explanation:"Taco là món ăn đường phố nổi tiếng của Mexico, gồm bánh tortilla gập lại và kẹp các loại nhân như thịt bò, thịt gà, thịt heo, hải sản cùng rau và nước sốt. Tên gọi 'taco' trong tiếng Tây Ban Nha được cho là xuất phát từ từ dùng để chỉ một 'cuộn' hoặc 'gói nhỏ', phù hợp với cách trình bày của món ăn."},
 
 {level:1,question:"Loại cá dùng để làm trứng cá muối caviar?",answer:"Cá tầm",explanation:"Cá tầm là loài cá nổi tiếng vì được dùng để sản xuất caviar, một trong những loại thực phẩm cao cấp nhất thế giới. Trứng cá tầm có hương vị đặc trưng, giàu dinh dưỡng và thường xuất hiện trong ẩm thực sang trọng.Cá tầm có nguồn gốc tự nhiên ở các vùng biển và sông thuộc châu Âu, Tây Á và khu vực biển Caspi"},
 
-{level:1,question:"Trong ly có đá mát ghê\nThêm viên đen nhỏ thích mê vô cùng\nHút hoài chẳng muốn ngừng luôn.Là món nước gì ai thường gọi tên?\"đố mẹo\"?",answer:"Trà sữa trân châu",explanation:"Trà sữa là thức uống kết hợp giữa trà và sữa, thường đi kèm các loại topping như trân châu. Trân châu được làm từ bột năng nên có độ dai đặc trưng. Thức uống này được yêu thích nhờ vị ngọt béo, dễ uống và có nhiều hương vị khác nhau xuất xứ từ ĐÀI LOAN"},
+{level:1,question:"Trong ly có đá mát ghê\nThêm viên đen nhỏ thích mê vô cùng\nHút hoài chẳng muốn ngừng luôn.Là món nước gì ai thường gọi tên? (đố mẹo)?",answer:"Trà sữa trân châu",explanation:"Trà sữa là thức uống kết hợp giữa trà và sữa, thường đi kèm các loại topping như trân châu. Trân châu được làm từ bột năng nên có độ dai đặc trưng. Thức uống này được yêu thích nhờ vị ngọt béo, dễ uống và có nhiều hương vị khác nhau xuất xứ từ ĐÀI LOAN"},
 
-{level:1,question:"Bên ngoài gói giấy nhỏ, bên trong ngọt béo, quê hương nổi tiếng ở Bến Tre, là gì? \"đố mẹo\"",answer:"Kẹo dừa",explanation:"Kẹo dừa có xuất xứ từ Bến Tre, tỉnh được mệnh danh là \"xứ dừa\" của Việt Nam. Người dân địa phương đã tận dụng nguồn dừa dồi dào để làm ra kẹo dừa từ nước cốt dừa, mạch nha và đường."},
+{level:1,question:"Bên ngoài gói giấy nhỏ, bên trong ngọt béo, quê hương nổi tiếng ở Bến Tre, là gì? (đố mẹo)",answer:"Kẹo dừa",explanation:"Kẹo dừa có xuất xứ từ Bến Tre, tỉnh được mệnh danh là \"xứ dừa\" của Việt Nam. Người dân địa phương đã tận dụng nguồn dừa dồi dào để làm ra kẹo dừa từ nước cốt dừa, mạch nha và đường."},
 
-{level:1,question:"Tôi có mắt nhưng không nhìn, có vỏ nhưng không mặc, có nước nhưng không bơi vậy tôi là là gì \"đố mẹo\"?",answer:"Thơm",explanation:"Thơm (dứa) là loại trái cây nhiệt đới có lớp vỏ dày bên ngoài, các 'mắt' trên vỏ nhưng không phải mắt để nhìn, và chứa nhiều nước bên trong. Tên gọi 'thơm' xuất phát từ mùi hương đặc trưng của quả khi chín.Ở Việt Nam, loại quả này được trồng nhiều tại Tiền Giang, Hậu Giang và Kiên Giang."},
+{level:1,question:"Tôi có mắt nhưng không nhìn, có vỏ nhưng không mặc, có nước nhưng không bơi vậy tôi là là gì (đố mẹo)?",answer:"Thơm",explanation:"Thơm (dứa) là loại trái cây nhiệt đới có lớp vỏ dày bên ngoài, các 'mắt' trên vỏ nhưng không phải mắt để nhìn, và chứa nhiều nước bên trong. Tên gọi 'thơm' xuất phát từ mùi hương đặc trưng của quả khi chín.Ở Việt Nam, loại quả này được trồng nhiều tại Tiền Giang, Hậu Giang và Kiên Giang."},
 
-{level:1,question:"Tên tôi có chữ long, nhưng không phải con vật vậy tôi là quả gì \"đố mẹo\"?",answer:"Thanh long",explanation:"Tên 'thanh long' xuất phát từ hình dáng các tai xanh trên vỏ quả giống vảy rồng. Đây là loại trái cây giàu vitamin C và chất xơ."},
+{level:1,question:"Tên tôi có chữ long, nhưng không phải con vật vậy tôi là quả gì (đố mẹo)?",answer:"Thanh long",explanation:"Tên 'thanh long' xuất phát từ hình dáng các tai xanh trên vỏ quả giống vảy rồng. Đây là loại trái cây giàu vitamin C và chất xơ."},
 
-{level:1,question:" Tôi mặc áo gai, ruột vàng thơm ngát vậy tôi là quả gì \"đố mẹo\"?",answer:"Mít",explanation:"Mít là loại trái cây nhiệt đới có lớp vỏ gai bên ngoài và múi vàng thơm ngọt bên trong. Tên gọi 'mít' bắt nguồn từ tên gọi dân gian lâu đời ở Đông Nam Á."},
+{level:1,question:" Tôi mặc áo gai, ruột vàng thơm ngát vậy tôi là quả gì (đố mẹo)?",answer:"Mít",explanation:"Mít là loại trái cây nhiệt đới có lớp vỏ gai bên ngoài và múi vàng thơm ngọt bên trong. Tên gọi 'mít' bắt nguồn từ tên gọi dân gian lâu đời ở Đông Nam Á."},
 
-{level:1,question:"Quả gì vỏ ví như tóc, ruột trắng trong, vị ngọt thanh?\"đố mẹo\"",answer:"Chôm chôm",explanation:"Tên gọi xuất phát từ vẻ ngoài xù xì giống mái tóc rối."},
+{level:1,question:"Quả gì vỏ ví như tóc, ruột trắng trong, vị ngọt thanh? (đố mẹo)",answer:"Chôm chôm",explanation:"Tên gọi xuất phát từ vẻ ngoài xù xì giống mái tóc rối."},
 
-{level:1,question:"Tôi không phải nước nhưng lại rung rinh, mát lạnh, thường có nhiều màu sắc. Tôi là gì?\"đố mẹo\"",answer:"Rau Cau",explanation:"Rau câu là món tráng miệng được làm từ bột rau câu, có kết cấu dai giòn và mát lạnh"},
+{level:1,question:"Tôi không phải nước nhưng lại rung rinh, mát lạnh, thường có nhiều màu sắc. Tôi là gì? (đố mẹo)",answer:"Rau Cau",explanation:"Rau câu là món tráng miệng được làm từ bột rau câu, có kết cấu dai giòn và mát lạnh"},
 
 {level:1,question:"Loại quả nào tên chỉ có một âm tiết và vị rất chua?",answer:"Cóc",explanation:"Tên gọi 'cóc' là tên dân gian của loại quả này từ lâu đời ở Việt Nam và nhiều nước Đông Nam Á."},
 
@@ -72,19 +72,19 @@ const questions = [
 
 {level:1,question:"Bánh gì nhiều lớp mỏng, nhân đậu xanh sầu riêng, nổi tiếng miền Tây?",answer:"Bánh pía",explanation:"Tên gọi 'pía' có nguồn gốc từ tiếng Triều Châu, nghĩa là bánh. Bánh pía nổi tiếng với nhiều lớp vỏ mỏng và nhân đậu xanh, sầu riêng, trứng muối.Nổi tiếng ở Sóc Trăng, Việt Nam"},
 
-{level:1,question:"Hạt gì trắng nhỏ, nấu lên thành món ăn chính của người Việt?\"đố mẹo\"",answer:"Gạo",explanation:"Gạo là lương thực chính của người Việt. Việt Nam cũng là một trong những quốc gia xuất khẩu gạo lớn nhất thế giới, thường nằm trong top 3 và hiện đứng thứ 2 thế giới.Đồng bằng sông Cửu Long và Đồng bằng sông Hồng là nơi chủ yếu tạo ra những hạt gạo"},
+{level:1,question:"Hạt gì trắng nhỏ, nấu lên thành món ăn chính của người Việt?(đố mẹo)",answer:"Gạo",explanation:"Gạo là lương thực chính của người Việt. Việt Nam cũng là một trong những quốc gia xuất khẩu gạo lớn nhất thế giới, thường nằm trong top 3 và hiện đứng thứ 2 thế giới.Đồng bằng sông Cửu Long và Đồng bằng sông Hồng là nơi chủ yếu tạo ra những hạt gạo"},
 
 {level:1,question:"Món gì càng cay càng nhiều người thích?",answer:"Tokbokki",explanation:"Tokbokki là món bánh gạo nổi tiếng của Hàn Quốc, được nấu cùng sốt gochujang cay ngọt. Chính vị cay đặc trưng là điều khiến nhiều người yêu thích món ăn này."},
 
-{level:1,question:"Món ăn nào ăn bằng thìa, thường được dùng khai vị và có nhiều nước\"đố mẹo\"?",answer:"Súp",explanation:"Súp là món ăn có nhiều nước, thường được dùng làm món khai vị và ăn bằng thìa. Món súp xuất hiện trong nhiều nền ẩm thực với nhiều nguyên liệu khác nhau."},
+{level:1,question:"Món ăn nào ăn bằng thìa, thường được dùng khai vị và có nhiều nước (đố mẹo)?",answer:"Súp",explanation:"Súp là món ăn có nhiều nước, thường được dùng làm món khai vị và ăn bằng thìa. Món súp xuất hiện trong nhiều nền ẩm thực với nhiều nguyên liệu khác nhau."},
 
-{level:1,question:"Món gì tên là một câu hỏi?\"đố mẹo\"?",answer:"Bánh hỏi",explanation:"Tên gọi 'bánh hỏi' có nguồn gốc từ cách làm công phu, người học nghề thường phải 'hỏi' cách chế biến mới làm được những sợi bánh mỏng, đan kết đẹp mắt.Phổ biến ở Bình Định, Phú Yên, Bình Thuận và nhiều tỉnh Nam Bộ."},
+{level:1,question:"Món gì tên là một câu hỏi?(đố mẹo)?",answer:"Bánh hỏi",explanation:"Tên gọi 'bánh hỏi' có nguồn gốc từ cách làm công phu, người học nghề thường phải 'hỏi' cách chế biến mới làm được những sợi bánh mỏng, đan kết đẹp mắt.Phổ biến ở Bình Định, Phú Yên, Bình Thuận và nhiều tỉnh Nam Bộ."},
 
-{level:1,question:"Món gì có đúc nhưng không xây nhà\"đố mẹo\"?",answer:"Bánh đúc",explanation:"Tên gọi 'bánh đúc' xuất phát từ cách làm bánh bằng cách đổ và đúc bột thành khối rồi để đông lại. Đây là món ăn dân dã quen thuộc của người Việt."},
+{level:1,question:"Món gì có đúc nhưng không xây nhà (đố mẹo)?",answer:"Bánh đúc",explanation:"Tên gọi 'bánh đúc' xuất phát từ cách làm bánh bằng cách đổ và đúc bột thành khối rồi để đông lại. Đây là món ăn dân dã quen thuộc của người Việt."},
 
-{level:1,question:"Món gì tên là một màu sắc\"đố mẹo\"?",answer:"Xôi gấc",explanation:"Xôi gấc có màu đỏ cam đặc trưng từ quả gấc nên nhiều người liên tưởng ngay đến một màu sắc"},
+{level:1,question:"Món gì tên là một màu sắc (đố mẹo)?",answer:"Xôi gấc",explanation:"Xôi gấc có màu đỏ cam đặc trưng từ quả gấc nên nhiều người liên tưởng ngay đến một màu sắc"},
 
-{level:1,question:"Bánh gì có tên bộ phận cơ thể\"đố mẹo\"?",answer:"Bánh tai Heo",explanation:"Bánh được gọi là 'tai heo' vì hình dáng các lớp bánh cuộn lại giống chiếc tai của con heo."},
+{level:1,question:"Bánh gì có tên bộ phận cơ thể (đố mẹo)?",answer:"Bánh tai Heo",explanation:"Bánh được gọi là 'tai heo' vì hình dáng các lớp bánh cuộn lại giống chiếc tai của con heo."},
 
 {level:1,question:"Áo xanh đứng giữa ruộng đồng,\nThân dài nhiều đốt, ruột trong ngọt ngào\nÉp ra ly nước lao xao\nNgày hè ai gặp cũng chào làm quen?",answer:"Cây mía",explanation:"Mía là loại cây có thân chứa nhiều đường tự nhiên, thường được ép lấy nước uống hoặc dùng để sản xuất đường."},
 
@@ -100,7 +100,7 @@ const questions = [
 
 {level:1,question:"Thứ gì màu trắng, uống được, nhưng không phải nước và cũng không phải nước ngọt?",answer:"Sữa Bò",explanation:"Sữa bò là thức uống dinh dưỡng được lấy từ bò sữa, nổi tiếng với hàm lượng canxi cao."},
 
-{level:1,question:"Kẹo gì người bán vừa kéo vừa gõ nhạc?\"đố mẹo\"",answer:"Kẹo kéo",explanation:"Kẹo kéo được làm từ đường và mạch nha. Người bán thường vừa kéo kẹo thành những dải dài vừa gõ thanh kim loại tạo âm thanh vui tai để thu hút khách."},
+{level:1,question:"Kẹo gì người bán vừa kéo vừa gõ nhạc (đố mẹo)?",answer:"Kẹo kéo",explanation:"Kẹo kéo được làm từ đường và mạch nha. Người bán thường vừa kéo kẹo thành những dải dài vừa gõ thanh kim loại tạo âm thanh vui tai để thu hút khách."},
 
 
 /* =========================================================
@@ -109,7 +109,7 @@ const questions = [
 
 {level:2,question:"Người được gọi là Kẻ chinh phục thế giới ở thế kỷ XIII?",answer:"Thành Cát Tư Hãn",explanation:"Thành Cát Tư Hãn (1162–1227) là người sáng lập và Đại Hãn đầu tiên của Đế quốc Mông Cổ. Ông đã thống nhất các bộ lạc Mông Cổ và xây dựng đế quốc lớn nhất thế giới thời bấy giờ."},
 
-{level:2,question:"Người đọc bản Tuyên ngôn Độc lập ngày 2/9/1945 là ai?",answer:"Hồ Chí Minh",explanation:"Hồ Chí Minh (1890–1969) là vị lãnh tụ vĩ đại của dân tộc Việt Nam, người đã đọc bản Tuyên ngôn Độc lập tại Quảng trường Ba Đình ngày 2/9/1945, khai sinh nước Việt Nam Dân chủ Cộng hòa.",},
+{level:2,question:"Người đọc bản Tuyên ngôn Độc lập ngày 2/9/1945 là ai?",answer:"Hồ Chí Minh",explanation:"Hồ Chí Minh (1890–1969) là vị lãnh tụ vĩ đại của dân tộc Việt Nam, người đã đọc bản Tuyên ngôn Độc lập tại Quảng trường Ba Đình ngày 2/9/1945, khai sinh nước Việt Nam Dân chủ Cộng hòa."},
 
 {level:2,question:"Hai Bà Trưng khởi nghĩa chống ách đô hộ của nước nào?",answer:"Nhà Hán",explanation:"Hai Bà Trưng gồm Trưng Trắc và Trưng Nhị đã lãnh đạo cuộc khởi nghĩa năm 40 chống lại sự đô hộ của nhà Hán, mở đầu cho nhiều cuộc đấu tranh giành độc lập của dân tộc Việt Nam},
 
@@ -155,7 +155,7 @@ const questions = [
 
 {level:2,question:"Anh trai của Chủ Tịch Hồ Chí Minh là ai?",answer:"Nguyễn Sinh Khiêm",explanation:"Nguyễn Sinh Khiêm (1888–1950) là anh ruột của Chủ tịch Hồ Chí Minh. Ông sống giản dị, am hiểu Hán học và phong thủy, gắn bó với quê hương Nghệ An trong phần lớn cuộc đời."},
 
-{level:2,question:"Ai là vị nữ tướng duy nhất trong khởi nghĩa Lam Sơn được sử sách ghi lại?",answer:"Bùi Thị Xuân",explanation:"Bùi Thị Xuân (khoảng 1752–1802) là một trong những nữ tướng tài ba của phong trào Tây Sơn. Bà nổi tiếng với tài thao lược và huấn luyện voi chiến, góp công lớn trong nhiều trận đánh của nhà Tây Sơn."},
+{level:2,question:"Ai là vị nữ tướng duy nhất trong khởi nghĩa Tây Sơn được sử sách ghi lại?",answer:"Bùi Thị Xuân",explanation:"Bùi Thị Xuân (khoảng 1752–1802) là một trong những nữ tướng tài ba của phong trào Tây Sơn. Bà nổi tiếng với tài thao lược và huấn luyện voi chiến, góp công lớn trong nhiều trận đánh của nhà Tây Sơn."},
 
 {level:2,question:"Bác Hồ ra đi tìm đường cứu nước năm nào?",answer:"1911",explanation:"Ngày 5/6/1911, Nguyễn Tất Thành (Bác Hồ) rời Bến Nhà Rồng lên tàu Amiral Latouche-Tréville để ra đi tìm đường cứu nước, bắt đầu hành trình tìm con đường giải phóng dân tộc Việt Nam."},
 
@@ -173,7 +173,7 @@ const questions = [
 
 {level:2,question:"Thiếu niên anh hùng bóp nát quả cam?",answer:"Trần Quốc Toản",explanation:"Trần Quốc Toản là một thiếu niên anh hùng thời nhà Trần. Khi mới 16 tuổi, vì quá căm giận giặc Nguyên xâm lược và không được dự hội nghị bàn việc nước, ông đã bóp nát quả cam đang cầm trong tay lúc nào không hay. Hình ảnh 'bóp nát quả cam' trở thành biểu tượng cho lòng yêu nước và ý chí quyết tâm đánh giặc của tuổi trẻ Việt Nam."},
 
-{level:2,question:"Người đốt kho xăng Thị Nghè?",answer:"Nguyễn Văn Trỗi",explanation:"Nguyễn Văn Trỗi là anh hùng liệt sĩ nổi tiếng trong cuộc kháng chiến chống Mỹ. Ông được biết đến với tinh thần yêu nước, lòng dũng cảm và sự kiên cường trước kẻ thù. Tên tuổi Nguyễn Văn Trỗi gắn liền với nhiều hoạt động cách mạng của thanh niên miền Nam trong thời kỳ đấu tranh giải phóng dân tộc."},
+{level:2,question:"Anh hùng liệt sĩ bị địch xử bắn tại Sài Gòn năm 1964??",answer:"Nguyễn Văn Trỗi",explanation:"Nguyễn Văn Trỗi là anh hùng liệt sĩ nổi tiếng trong cuộc kháng chiến chống Mỹ. Ông được biết đến với tinh thần yêu nước, lòng dũng cảm và sự kiên cường trước kẻ thù. Tên tuổi Nguyễn Văn Trỗi gắn liền với nhiều hoạt động cách mạng của thanh niên miền Nam trong thời kỳ đấu tranh giải phóng dân tộc."},
 
 {level:2,question:"Ai chỉ huy chiến dịch Điện Biên Phủ?",answer:"Võ Nguyên Giáp",explanation:"Đại tướng Võ Nguyên Giáp là Tổng tư lệnh Quân đội Nhân dân Việt Nam và là người trực tiếp chỉ huy Chiến dịch Điện Biên Phủ năm 1954. Dưới sự lãnh đạo tài tình của ông, quân ta đã giành thắng lợi vang dội, góp phần kết thúc cuộc kháng chiến chống thực dân Pháp."},
 
@@ -193,7 +193,7 @@ const questions = [
 
 {level:2,question:"Anh hùng thiếu niên liên lạc nổi tiếng?",answer:"Kim Đồng",explanation:"Kim Đồng (tên thật là Nông Văn Dền) là đội viên thiếu niên liên lạc nổi tiếng trong thời kỳ kháng chiến chống thực dân Pháp. Anh là một trong những đội viên đầu tiên của Đội Thiếu niên Tiền phong và đã dũng cảm hy sinh năm 1943 khi đang làm nhiệm vụ bảo vệ cán bộ cách mạng. Tấm gương của Kim Đồng được nhiều thế hệ thiếu nhi Việt Nam noi theo."},
 
-{level:2,question:"Việt Nam gia nhập ASEAN năm nào?",answer:"1995",explanation:"Việt Nam chính thức gia nhập <Organization>Hiệp hội các quốc gia Đông Nam Á (ASEAN)</Organization> vào ngày 28/7/1995 tại Brunei. Sự kiện này đánh dấu bước phát triển quan trọng trong quá trình hội nhập khu vực và mở rộng quan hệ hợp tác của Việt Nam với các nước Đông Nam Á."},
+{level:2,question:"Việt Nam gia nhập ASEAN năm nào?",answer:"1995",explanation:"Việt Nam chính thức gia nhập Hiệp hội các quốc gia Đông Nam Á (ASEAN) vào ngày 28/7/1995 tại Brunei. Sự kiện này đánh dấu bước phát triển quan trọng trong quá trình hội nhập khu vực và mở rộng quan hệ hợp tác của Việt Nam với các nước Đông Nam Á."},
 
 {level:2,question:"Năm nào xảy ra nạn đói khiến hơn 2 triệu người Việt Nam thiệt mạng",answer:"1945",explanation:"Nạn đói năm 1945 là một trong những thảm họa lớn nhất trong lịch sử Việt Nam. Từ cuối năm 1944 đến đầu năm 1945, do chiến tranh, thiên tai và chính sách bóc lột của phát xít Nhật cùng thực dân Pháp, hơn 2 triệu người dân đã thiệt mạng vì đói, chủ yếu ở các tỉnh miền Bắc."},
 
@@ -276,7 +276,7 @@ const questions = [
 {level:4,question:"Cầu thủ này 🐢+🥷 là ai?",answer:"Mbappé"},
 {level:4,question:"Cầu thủ này 🇵🇹 + 💪 + 7️⃣ + 🐐 là ai ?",answer:"Ronaldo CR7"},
 {level:4,question:"Cầu thủ này 👽 + ⚽ là ai?",answer:"Ronaldo"},
-{level:4,question:"Câu lạc bộ này 🔵 + 👑🦁 là?",answer:"Chelse"},
+{level:4,question:"Câu lạc bộ này 🔵 + 👑🦁 là?",answer:"Chelsea"},
 {level:4,question:"Biệt danh Lữ đoàn đỏ là của?",answer:"Liverpool"},
 {level:4,question:"Câu lạc bộ này 🔴 + 🧨 là?",answer:"Arsenal"},
 {level:4,question:"Câu lạc bộ này ⚪+👑+🏆?",answer:"Real Madrid"},
@@ -326,7 +326,7 @@ const questions = [
 
 {level:5,question:"Thăng Long là tên cũ của thành phố nào hiện nay?",answer:"Hà Nội"},
 {level:5,question:"Có bao nhiêu kỳ quan thế giới cổ đại?",answer:"7"},
-{level:5,question:"Việt Nam có bao nhiêu Di sản Thế giới UNESCO?",answer:"8"},
+{level:5,question:"Việt Nam có bao nhiêu Di sản Thế giới UNESCO?",answer:"9"},
 {level:5,question:"Hang động lớn nhất thế giới nằm ở quốc gia nào?",answer:"Việt Nam"},
 {level:5,question:"Thành phố nào được mệnh danh là Thành phố ngàn hoa?",answer:"Đà Lạt"},
 {level:5,question:"Thành phố nào có biệt danh Hòn ngọc Viễn Đông?",answer:"Hồ Chí Minh"},
@@ -408,7 +408,7 @@ const questions = [
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Nguyễn Khoa Điềm?\nKhi ta lớn lên Đất Nước đã có rồi\nĐất Nước có trong những cái \"ngày xửa ngày xưa...\"mẹ thường hay kể\nĐất Nước bắt đầu với miếng trầu bây giờ bà ăn",answer:"Đất Nước"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Chính Hữu?\nQuê hương anh nước mặn đồng chua\nLàng tôi nghèo đất cày lên sỏi đá\nAnh với tôi đôi người xa lạ\nTự phương trời chẳng hẹn quen nhau",answer:"Đồng chí"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Viễn Phương?\nNgày ngày mặt trời đi qua trên lăng\nThấy một mặt trời trong lăng rất đỏ\nNgày ngày dòng người đi trong thương nhớ\nKết tràng hoa dâng bảy mươi chín mùa xuân",answer:"Viếng lăng Bác"},
-{level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Hàn Mặc Tử?\nSao anh không về chơi thôn Vĩ\nNhìn nắng hàng cau nắng mới lên\nVườn ai mướt quá xanh như ngọc\nLá trúc che ngang mặt chữ điền",answer:"Huế"},
+{level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Hàn Mặc Tử?\nSao anh không về chơi thôn Vĩ\nNhìn nắng hàng cau nắng mới lên\nVườn ai mướt quá xanh như ngọc\nLá trúc che ngang mặt chữ điền",answer:"Đây thôn Vĩ Dạ"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của Bác Hồ?\nTiếng suối trong như tiếng hát xa\nTrăng lồng cổ thụ bóng lồng hoa\nCảnh khuya như vẽ người chưa ngủ\nChưa ngủ vì lo nỗi nước nhà",answer:"Cảnh khuya"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Hồ Xuân Hương?\nThân em vừa trắng lại vừa tròn\nBảy nổi ba chìm với nước non\nRắn nát mặc dầu tay kẻ nặn\nMà em vẫn giữ tấm lòng son",answer:"Bánh trôi nước"},
 {level:6,question:"Đoạn thơ sau trích ra từ tác phẩm nào của nhà thơ Tố Hữu?\nMình về mình có nhớ ta\nTa về ta nhớ những hoa cùng người\nRừng xanh hoa chuối đỏ tươi\nĐèo cao nắng ánh dao gài thắt lưng",answer:"Việt Bắc"},
